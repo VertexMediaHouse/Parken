@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --color-ink: #05080c;
+  --color-cream: #fbf8f4;
+  --color-accent: #0099ff;
+}
+
+body {
+  background: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes marquee {
+  to { transform: translateX(calc(-50% - 0.5rem)); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

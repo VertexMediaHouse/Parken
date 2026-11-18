@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.local
+.env*
+.DS_Store
+Thumbs.db
+*.log
+
+# Claude Code
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+
+# old wireframe draft
+wireframe/
