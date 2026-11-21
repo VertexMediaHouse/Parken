@@ -1,0 +1,1014 @@
+{
+ "url": "http://localhost:5180/",
+ "at": "2026-11-20T13:19:57.168Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.5,
+    0.94,
+    0.63,
+    0.8,
+    1,
+    1,
+    1,
+    0.63,
+    0.45,
+    0.74,
+    0.8,
+    0.8
+   ],
+   "motion": {
+    "elements": 44,
+    "css": 9,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11396,
+     "screens": 12.7,
+     "words": 474,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 5,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 16,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "3ad7a62206a97cbc6d86d076701f53a0.png",
+      "warehouse-aisle.webp",
+      "warehouse-racks.webp",
+      "d69f347a7af9b6768177cdac9874b11b.jpg",
+      "46a59c725f2f845396470ddbf4aaf5dc.png",
+      "shirhatti-hospital.webp",
+      "0cde396e732d34e99a30452e72a74c4f.jpg",
+      "bengeri-market.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Wire, light and power. Since 2003, in three states.",
+     "words": 9,
+     "chars": 51,
+     "lines": 2,
+     "size": 35,
+     "vw": 2.4,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.035,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 338,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Wire, light and power. Since 2003, in three states.",
+     "words": 9,
+     "lines": 2,
+     "size": 35,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Wire, light and power. Since 2003, in three states.",
+      "words": 9,
+      "chars": 51,
+      "lines": 2,
+      "size": 35,
+      "vw": 2.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 338,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "1,700+",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 244.8,
+      "vw": 17,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.06,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1516,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "23",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 60.8,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 1756,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "13",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 60.8,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.04,
+      "top": 1756,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "One business, grown three ways",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 2001,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Government Hospital, Shirhatti",
+      "words": 3,
+      "chars": 30,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 2.1,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.55,
+      "top": 3330,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Mother & Child Hospital",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 2.1,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.55,
+      "top": 4230,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Bengeri Smart Market",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 2.1,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.55,
+      "top": 5130,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Jayadeva Hospital, Hubballi",
+      "words": 3,
+      "chars": 27,
+      "lines": 1,
+      "size": 30.4,
+      "vw": 2.1,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.55,
+      "top": 6030,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The PARKAN range",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 6756,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Legrand Havells Polycab Schneider Electric L&T ABB Finolex Cables KEI Wires & Cables Crompton Orient Electric V-Guard RR Kabel GM Goldmedal GreatWhite Norisys",
+      "words": 23,
+      "chars": 158,
+      "lines": 1,
+      "size": 115.2,
+      "vw": 8,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 6.8,
+      "top": 7779,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Legrand Havells Polycab Schneider Electric L&T ABB Finolex Cables KEI Wires & Cables Crompton Orient Electric V-Guard RR Kabel GM Goldmedal GreatWhite Norisys",
+      "words": 23,
+      "chars": 158,
+      "lines": 1,
+      "size": 115.2,
+      "vw": 8,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 6.8,
+      "top": 7779,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Built on trust in Hubballi",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 63,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 8384,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Planning a project?",
+      "words": 3,
+      "chars": 19,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 9715,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PARKAN",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 331.2,
+      "vw": 23,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.06,
+      "leading": 0.78,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 11067,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 6,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      19,
+      26,
+      30,
+      35,
+      61,
+      63,
+      64,
+      115,
+      245,
+      331
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 19,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.005,
+      "contrast": null
+     },
+     "measureChars": 71,
+     "max": {
+      "size": 331.2,
+      "vw": 23,
+      "font": "Switzer",
+      "text": "PARKAN"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#e8edf3",
+       "top": 96,
+       "hsl": {
+        "h": 213,
+        "s": 0.31,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#0a1f3e",
+       "top": 924,
+       "hsl": {
+        "h": 216,
+        "s": 0.72,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#05080e",
+       "top": 2903,
+       "hsl": {
+        "h": 220,
+        "s": 0.47,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#0e2a52",
+       "top": 7684,
+       "hsl": {
+        "h": 215,
+        "s": 0.71,
+        "l": 0.19
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#121a26",
+       "share": 0.31
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.3
+      },
+      {
+       "color": "#4a5468",
+       "share": 0.2
+      },
+      {
+       "color": "#d6deea",
+       "share": 0.12
+      },
+      {
+       "color": "#c9d2de",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#d2232a",
+      "hsl": {
+       "h": 358,
+       "s": 0.71,
+       "l": 0.48
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get a quote",
+      "Get a quote"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 50,
+     "squareMedia": 15,
+     "roundedMedia": 1,
+     "mediaRadius": 50,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.47
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11396,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section.seam",
+      "tag": "section",
+      "top": 96,
+      "height": 804,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Wire, light and power.",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 1010,
+      "textLeft": 32,
+      "textRight": 1010,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.figure-photo",
+      "tag": "section",
+      "top": 900,
+      "height": 917,
+      "words": 34,
+      "media": 1,
+      "middle": 122,
+      "heading": {
+       "text": "Our dealer network",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 32,
+      "textLeft": 17,
+      "textRight": 32,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.tiles",
+      "tag": "section",
+      "top": 1817,
+      "height": 903,
+      "words": 66,
+      "media": 3,
+      "middle": 45,
+      "heading": {
+       "text": "One business, grown three ways",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 0,
+      "textLeft": 32,
+      "textRight": 178,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.panel",
+      "tag": "article",
+      "top": 2903,
+      "height": 900,
+      "words": 8,
+      "media": 0,
+      "middle": 564,
+      "heading": {
+       "text": "Government Hospital, Shirhatti",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.panel",
+      "tag": "article",
+      "top": 3803,
+      "height": 900,
+      "words": 9,
+      "media": 0,
+      "middle": 592,
+      "heading": {
+       "text": "Mother & Child Hospital",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.panel",
+      "tag": "article",
+      "top": 4703,
+      "height": 900,
+      "words": 8,
+      "media": 0,
+      "middle": 582,
+      "heading": {
+       "text": "Bengeri Smart Market",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.panel",
+      "tag": "article",
+      "top": 5603,
+      "height": 900,
+      "words": 7,
+      "media": 0,
+      "middle": 663,
+      "heading": {
+       "text": "Jayadeva Hospital, Hubballi",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.range",
+      "tag": "section",
+      "top": 6572,
+      "height": 928,
+      "words": 29,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "The PARKAN range",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.names",
+      "tag": "section",
+      "top": 7684,
+      "height": 460,
+      "words": 95,
+      "media": 0,
+      "middle": 15903,
+      "heading": {
+       "text": "Legrand",
+       "size": 115,
+       "tag": "span"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": -1731,
+      "textRight": -16271,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.inset",
+      "tag": "section",
+      "top": 8144,
+      "height": 1174,
+      "words": 75,
+      "media": 0,
+      "middle": 214,
+      "heading": {
+       "text": "Built on trust in Hubballi",
+       "size": 63,
+       "tag": "h2"
+      },
+      "left": 76,
+      "right": 197,
+      "textLeft": 76,
+      "textRight": 197,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.returns",
+      "tag": "section",
+      "top": 9502,
+      "height": 810,
+      "words": 38,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Planning a project?",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 960,
+      "right": 65,
+      "textLeft": 960,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 10496,
+      "height": 900,
+      "words": 60,
+      "media": 1,
+      "middle": 199,
+      "heading": null,
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Wire, light and power. Since 2003, in three states.",
+      "size": 35,
+      "top": 338,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 10
+     },
+     {
+      "x": 322,
+      "n": 4
+     },
+     {
+      "x": 902,
+      "n": 4
+     },
+     {
+      "x": 382,
+      "n": 2
+     },
+     {
+      "x": 845,
+      "n": 2
+     },
+     {
+      "x": 960,
+      "n": 2
+     },
+     {
+      "x": 46,
+      "n": 1
+     },
+     {
+      "x": 76,
+      "n": 1
+     },
+     {
+      "x": 117,
+      "n": 1
+     },
+     {
+      "x": 491,
+      "n": 1
+     },
+     {
+      "x": 619,
+      "n": 1
+     },
+     {
+      "x": 860,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 19,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 780,
+     "w": 1440,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (15, 19, 26, 30, 35, 61, 63, 64, 115, 245, 331).",
+   "fix": "A page needs about five: display, heading, lead, body, small."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "empty-middle",
+   "width": 1440,
+   "message": "1 section(s) have content at both edges and 15903px of nothing between: \"Legrand\"",
+   "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half."
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (32px, 322px, 902px, 382px, 845px, 960px, 46px); the three most used hold only 58% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "d:\\AI\\Parken\\.taste-skill\\film\\desktop-fold.jpg",
+   "pages": [
+    "d:\\AI\\Parken\\.taste-skill\\film\\desktop-page-01.jpg",
+    "d:\\AI\\Parken\\.taste-skill\\film\\desktop-page-02.jpg",
+    "d:\\AI\\Parken\\.taste-skill\\film\\desktop-page-03.jpg"
+   ],
+   "film": [
+    "d:\\AI\\Parken\\.taste-skill\\film\\desktop-film-01.jpg",
+    "d:\\AI\\Parken\\.taste-skill\\film\\desktop-film-02.jpg"
+   ]
+  }
+ ]
+}

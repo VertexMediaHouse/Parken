@@ -1,0 +1,16 @@
+{
+  "Main": "/",
+  "About": "/about",
+  "Company": "/company",
+  "Leadership": "/leadership",
+  "Branches": "/branches",
+  "WhyUs": "/why-us",
+  "Verticals": "/verticals",
+  "Trading": "/trading",
+  "Infrastructure": "/infrastructure",
+  "Manufacturing": "/in-house-brand",
+  "Products": "/products",
+  "ProductDetail": "/product",
+  "Contact": "/contact",
+  "Admin": "/admin"
+}

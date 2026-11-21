@@ -1,0 +1,1803 @@
+{
+ "url": "http://localhost:5180/infrastructure",
+ "at": "2026-11-20T13:20:54.556Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.67,
+    0.67,
+    0.67,
+    0.69,
+    0.52,
+    0.63,
+    1
+   ],
+   "motion": {
+    "elements": 25,
+    "css": 3,
+    "transitions": 22,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6113,
+     "screens": 6.8,
+     "words": 437,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "d69f347a7af9b6768177cdac9874b11b.jpg",
+      "0cde396e732d34e99a30452e72a74c4f.jpg",
+      "bb97532d2a242883a6cae7275a7ebe06.jpg",
+      "306556b2cb02a531c3cba888a36ca077.jpg",
+      "7c2464003990a220631972e928a422ee.jpg",
+      "7aa2c2aa6de312a190ee5d9684012526.jpg",
+      "2fbd60c19eb9c691a775bbfd81bf9f56.jpg",
+      "unkal-lake.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Infrastructure & Projects",
+     "words": 3,
+     "chars": 25,
+     "lines": 1,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 0.98,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.69,
+     "top": 239,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Infrastructure & Projects",
+     "words": 3,
+     "lines": 1,
+     "size": 64,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Infrastructure & Projects",
+      "words": 3,
+      "chars": 25,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.69,
+      "top": 239,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "50+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 60.8,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 687,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4,100+",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 60.8,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.26,
+      "top": 687,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2020",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 60.8,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 687,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Complete electrical works, one team",
+      "words": 5,
+      "chars": 35,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.69,
+      "top": 935,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Work we've delivered",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1602,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What we're building now",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3046,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "From survey to switch-on",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 3934,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Have a government or infrastructure requirement?",
+      "words": 6,
+      "chars": 48,
+      "lines": 3,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 4526,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PARKAN",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 388.8,
+      "vw": 27,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.06,
+      "leading": 0.78,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 5740,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.77,
+       "mono": false
+      },
+      {
+       "family": "Switzer",
+       "share": 0.23,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      19,
+      26,
+      61,
+      64,
+      389
+     ],
+     "sizeCount": 7,
+     "notLoaded": [
+      "Inter"
+     ],
+     "body": {
+      "font": "Inter",
+      "size": 15,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.006,
+      "contrast": 16.1
+     },
+     "measureChars": 49,
+     "max": {
+      "size": 388.8,
+      "vw": 27,
+      "font": "Switzer",
+      "text": "PARKAN"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "/ / Infrastructure & Projects",
+      "above": "Infrastructure & Projects",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 15,
+      "top": 188
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 12,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e8edf3",
+       "top": 96,
+       "hsl": {
+        "h": 213,
+        "s": 0.31,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#f3f6f9",
+       "top": 1474,
+       "hsl": {
+        "h": 210,
+        "s": 0.33,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#0e2a52",
+       "top": 4454,
+       "hsl": {
+        "h": 215,
+        "s": 0.71,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#05080e",
+       "top": 5213,
+       "hsl": {
+        "h": 220,
+        "s": 0.47,
+        "l": 0.04
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#121a26",
+       "share": 0.55
+      },
+      {
+       "color": "#1a1f2b",
+       "share": 0.11
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.09
+      },
+      {
+       "color": "#4a5468",
+       "share": 0.07
+      },
+      {
+       "color": "#dce4f0",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#f3f6f9",
+      "hsl": {
+       "h": 210,
+       "s": 0.33,
+       "l": 0.96
+      },
+      "fg": "#121a26"
+     },
+     "lowContrast": [
+      {
+       "text": "Verticals",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#d2232a",
+       "bg": "#e8edf3"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 5,
+     "radius": 0,
+     "height": 39,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get a quote",
+      "Overview",
+      "Trading & Distribution",
+      "Infrastructure & Projects",
+      "In-house Brand"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 14,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1054
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1721
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3165
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 4052
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6113,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section.pagehead.on-dark",
+      "tag": "section",
+      "top": 96,
+      "height": 427,
+      "words": 32,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Infrastructure & Projects",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 64,
+      "right": 712,
+      "textLeft": 64,
+      "textRight": 712,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section",
+      "tag": "section",
+      "top": 602,
+      "height": 205,
+      "words": 18,
+      "media": 0,
+      "middle": 207,
+      "heading": {
+       "text": "50+",
+       "size": 61,
+       "tag": "span"
+      },
+      "left": 117,
+      "right": 138,
+      "textLeft": 117,
+      "textRight": 138,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 807,
+      "height": 668,
+      "words": 76,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Complete electrical works, one team",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 64,
+      "right": 179,
+      "textLeft": 64,
+      "textRight": 179,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec.alt",
+      "tag": "section",
+      "top": 1474,
+      "height": 1444,
+      "words": 90,
+      "media": 4,
+      "middle": 24,
+      "heading": {
+       "text": "Work we've delivered",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 64,
+      "right": 64,
+      "textLeft": 64,
+      "textRight": 82,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 2918,
+      "height": 888,
+      "words": 96,
+      "media": 3,
+      "middle": 24,
+      "heading": {
+       "text": "What we're building now",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 64,
+      "right": 64,
+      "textLeft": 64,
+      "textRight": 95,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec.alt",
+      "tag": "section",
+      "top": 3806,
+      "height": 520,
+      "words": 36,
+      "media": 0,
+      "middle": 156,
+      "heading": {
+       "text": "From survey to switch-on",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 64,
+      "right": 134,
+      "textLeft": 64,
+      "textRight": 134,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 4326,
+      "height": 703,
+      "words": 37,
+      "media": 0,
+      "middle": 193,
+      "heading": {
+       "text": "Have a government or infrastructure requirement?",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 160,
+      "textLeft": 136,
+      "textRight": 160,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 5213,
+      "height": 900,
+      "words": 60,
+      "media": 1,
+      "middle": 219,
+      "heading": null,
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 1316,
+      "height": 276
+     },
+     {
+      "top": 2756,
+      "height": 280
+     },
+     {
+      "top": 3648,
+      "height": 276
+     },
+     {
+      "top": 4168,
+      "height": 348
+     },
+     {
+      "top": 4832,
+      "height": 380
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Infrastructure & Projects",
+      "size": 64,
+      "top": 239,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 92,
+      "n": 7
+     },
+     {
+      "x": 64,
+      "n": 6
+     },
+     {
+      "x": 537,
+      "n": 5
+     },
+     {
+      "x": 983,
+      "n": 5
+     },
+     {
+      "x": 760,
+      "n": 3
+     },
+     {
+      "x": 136,
+      "n": 2
+     },
+     {
+      "x": 430,
+      "n": 2
+     },
+     {
+      "x": 1098,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.28,
+    "voidBox": {
+     "x": 780,
+     "y": 120,
+     "w": 660,
+     "h": 540
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.69,
+    0.65,
+    0.81,
+    0.59,
+    0.49,
+    0.48,
+    0.86,
+    0.92,
+    0.57,
+    0.62,
+    0.87
+   ],
+   "motion": {
+    "elements": 27,
+    "css": 3,
+    "transitions": 24,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9194,
+     "screens": 10.9,
+     "words": 437,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "d69f347a7af9b6768177cdac9874b11b.jpg",
+      "0cde396e732d34e99a30452e72a74c4f.jpg",
+      "bb97532d2a242883a6cae7275a7ebe06.jpg",
+      "306556b2cb02a531c3cba888a36ca077.jpg",
+      "7c2464003990a220631972e928a422ee.jpg",
+      "7aa2c2aa6de312a190ee5d9684012526.jpg",
+      "2fbd60c19eb9c691a775bbfd81bf9f56.jpg",
+      "unkal-lake.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "4,100+",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Switzer",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.62,
+     "top": 795,
+     "tag": "span",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Infrastructure & Projects",
+     "words": 3,
+     "lines": 2,
+     "size": 33.3,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Infrastructure & Projects",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 231,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "50+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.62,
+      "top": 726,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4,100+",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.62,
+      "top": 795,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2020",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.63,
+      "top": 864,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Complete electrical works, one team",
+      "words": 5,
+      "chars": 35,
+      "lines": 2,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1071,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Work we've delivered",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 2191,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What we're building now",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5013,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "From survey to switch-on",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6976,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Have a government or infrastructure requirement?",
+      "words": 6,
+      "chars": 48,
+      "lines": 3,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 7815,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PARKAN",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 105.3,
+      "vw": 27,
+      "font": "Switzer",
+      "weight": 600,
+      "tracking": -0.06,
+      "leading": 0.78,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 9001,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.77,
+       "mono": false
+      },
+      {
+       "family": "Switzer",
+       "share": 0.23,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      20,
+      33,
+      40,
+      105
+     ],
+     "sizeCount": 6,
+     "notLoaded": [
+      "Inter"
+     ],
+     "body": {
+      "font": "Inter",
+      "size": 14,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.006,
+      "contrast": 16.1
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 105.3,
+      "vw": 27,
+      "font": "Switzer",
+      "text": "PARKAN"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "/ / Infrastructure & Projects",
+      "above": "Infrastructure & Projects",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 182
+     },
+     {
+      "text": "Government projects completed",
+      "above": "4,100+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 774
+     },
+     {
+      "text": "Streetlights installed for the PWD",
+      "above": "2020",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 843
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 8,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e8edf3",
+       "top": 114,
+       "hsl": {
+        "h": 213,
+        "s": 0.31,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#f3f6f9",
+       "top": 2103,
+       "hsl": {
+        "h": 210,
+        "s": 0.33,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#0e2a52",
+       "top": 7779,
+       "hsl": {
+        "h": 215,
+        "s": 0.71,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#05080e",
+       "top": 8452,
+       "hsl": {
+        "h": 220,
+        "s": 0.47,
+        "l": 0.04
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#121a26",
+       "share": 0.55
+      },
+      {
+       "color": "#1a1f2b",
+       "share": 0.11
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.09
+      },
+      {
+       "color": "#4a5468",
+       "share": 0.07
+      },
+      {
+       "color": "#dce4f0",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#f3f6f9",
+      "hsl": {
+       "h": 210,
+       "s": 0.33,
+       "l": 0.96
+      },
+      "fg": "#121a26"
+     },
+     "lowContrast": [
+      {
+       "text": "Verticals",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#d2232a",
+       "bg": "#e8edf3"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 5,
+     "radius": 0,
+     "height": 38,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get a quote",
+      "Overview",
+      "Trading & Distribution",
+      "Infrastructure & Projects",
+      "In-house Brand"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 14,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1193
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 2348
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 5135
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 7097
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 106,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9194,
+    "margins": {
+     "left": 20,
+     "right": 37
+    },
+    "sections": [
+     {
+      "sel": "section.pagehead.on-dark",
+      "tag": "section",
+      "top": 114,
+      "height": 403,
+      "words": 32,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Infrastructure & Projects",
+       "size": 33,
+       "tag": "h1"
+      },
+      "left": 28,
+      "right": 37,
+      "textLeft": 28,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "nav.subnav",
+      "tag": "nav",
+      "top": 517,
+      "height": 124,
+      "words": 9,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 38,
+      "right": 57,
+      "textLeft": 38,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section",
+      "tag": "section",
+      "top": 641,
+      "height": 342,
+      "words": 18,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "50+",
+       "size": 40,
+       "tag": "span"
+      },
+      "left": 73,
+      "right": 111,
+      "textLeft": 73,
+      "textRight": 111,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 983,
+      "height": 1120,
+      "words": 76,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Complete electrical works, one team",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 47,
+      "textLeft": 20,
+      "textRight": 47,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec.alt",
+      "tag": "section",
+      "top": 2103,
+      "height": 2822,
+      "words": 90,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Work we've delivered",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 44,
+      "textLeft": 20,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 4925,
+      "height": 1963,
+      "words": 96,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "What we're building now",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 44,
+      "textLeft": 20,
+      "textRight": 73,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec.alt",
+      "tag": "section",
+      "top": 6888,
+      "height": 803,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "From survey to switch-on",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 61,
+      "textLeft": 20,
+      "textRight": 61,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.sec",
+      "tag": "section",
+      "top": 7691,
+      "height": 641,
+      "words": 37,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Have a government or infrastructure requirement?",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 44,
+      "right": 44,
+      "textLeft": 44,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 8452,
+      "height": 743,
+      "words": 61,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": -4,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 8192,
+      "height": 256
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Infrastructure & Projects",
+      "size": 33,
+      "top": 231,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 44,
+      "n": 15
+     },
+     {
+      "x": 72,
+      "n": 10
+     },
+     {
+      "x": 20,
+      "n": 6
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [
+     {
+      "text": "PARKAN",
+      "px": 4,
+      "side": "right"
+     }
+    ],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Have a government or infrastructure requirement?\" → 3 lines (6 words, 64px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"/ / Infrastructure & Projects\" above \"Infrastructure & Projects\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Verticals\" 4.4:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-fallback",
+   "width": 1440,
+   "message": "Typeface(s) declared but not loaded, so a fallback is rendering: Inter",
+   "fix": "Fix the font URL / family name, or the screenshots you are judging are not the design.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15px.",
+   "fix": "Body copy 16–20px."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 64px (4.4vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "A 380px stretch at 4832px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  },
+  {
+   "level": "WARN",
+   "id": "hero-void",
+   "width": 1440,
+   "message": "28% of the first screen is one empty block (660×540px at 780,120).",
+   "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 8 different lines (92px, 64px, 537px, 983px, 760px, 136px, 430px); the three most used hold only 58% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Have a government or infrastructure requirement?\" → 3 lines (6 words, 33.3px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 390,
+   "message": "Body text is 14px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 20px on the left, 37px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "one-sided-bleed",
+   "width": 390,
+   "message": "1 display line(s) start inside the margin but run off the right edge by a few pixels: \"PARKAN\" (4px)",
+   "fix": "Fit the line to the content box by measurement (a small fit script, or SVG text with textLength), or bleed it on purpose by a clear amount from the margin. A name sliced by a few pixels on one side reads as a mistake."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "d:\\AI\\Parken\\.taste-skill\\sub\\desktop-fold.jpg",
+   "pages": [
+    "d:\\AI\\Parken\\.taste-skill\\sub\\desktop-page-01.jpg",
+    "d:\\AI\\Parken\\.taste-skill\\sub\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "d:\\AI\\Parken\\.taste-skill\\sub\\mobile-fold.jpg",
+   "pages": [
+    "d:\\AI\\Parken\\.taste-skill\\sub\\mobile-page-01.jpg",
+    "d:\\AI\\Parken\\.taste-skill\\sub\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
