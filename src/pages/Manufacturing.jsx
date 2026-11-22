@@ -2,6 +2,14 @@ import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
+import Button from '../Button.jsx'
+
+const QUALITY = [
+  ['Selected partners', 'Carefully chosen contract manufacturing partners.', <><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5 5 0 0 1 3.5 6" /></>],
+  ['Stage-wise QC', 'Quality checks at every stage of production.', <><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></>],
+  ['Certified', 'Compliance with [BIS / ISI / relevant] standards.', <><circle cx="12" cy="9" r="6" /><path d="M9 14.5L8 21l4-2 4 2-1-6.5" /></>],
+  ['Ready reach', 'Available through 13 branches and 1,700+ dealers.', <><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></>],
+]
 
 class Component extends DCLogic {
 renderVals() {
@@ -24,13 +32,13 @@ export default function Manufacturing() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/quality-lab.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / In-house Brand</p>
 <p className={"eyebrow"}>Vertical 03 · Since 2026</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>In-house Brand</h1>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>In-house <em>Brand</em></h1>
 <p className={"lead"}>We create quality electrical products under our own PARKAN brand – backed by 23+ years of trade experience and a 1,700+ dealer network.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><a href={"/verticals"}>Overview</a><a href={"/trading"}>Trading &amp; Distribution</a><a href={"/infrastructure"}>Infrastructure &amp; Projects</a><a className={"on"} href={"/in-house-brand"}>In-house Brand</a></div></nav>
+<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap g2"} style={{gap: "64px", alignItems: "center"}}>
 <div className={"g2"} style={{gap: "12px"}}>
@@ -42,26 +50,25 @@ export default function Manufacturing() {
 <div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Our latest chapter</p><h2 className={"h2"}>From trusted distributor to trusted brand</h2>
 <p>After more than two decades of supplying the market, we know what dealers, contractors and projects need. Through contract manufacturing, we now create electrical products under the PARKAN name – checked against our own quality standards before they reach you.</p>
 <p>The range is building a scalable platform for long-term expansion, with more products being added.</p>
-<a className={"btn btn-blue"} href={"/products"} style={{width: "max-content"}}>View Our Products</a></div>
+<Button variant="primary" href={"/products"}>View Our Products</Button></div>
 </div></section>
 
 <section className={"sec alt"}><div className={"wrap"}>
-<div className={"sechead"}><div><p className={"eyebrow"}>Our product range</p><h2 className={"h2"}>PARKAN products</h2></div><a className={"link"} href={"/products"}>See all products →</a></div>
+<div className={"sechead"}><div><p className={"eyebrow"}>Our product range</p><h2 className={"h2"}>PARKAN products</h2></div><Button variant="link" href={"/products"}>See all products →</Button></div>
 <div className={"g5"} style={{gap: "16px"}}>
 {v.range.map((p, i) => (<Fragment key={i}>
-<article className={"card card-flat"}><img src={p.img} alt={p.name} style={{width: "100%", height: "150px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"} style={{padding: "16px"}}><span className={"tag"}>{p.cat}</span><h3 className={"h4"} style={{fontSize: "15px"}}>{p.name}</h3><a className={"link small"} href={"/product"}>View →</a></div></article>
+<article className={"card card-flat"}><img src={p.img} alt={p.name} style={{width: "100%", height: "150px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"} style={{padding: "16px"}}><span className={"tag"}>{p.cat}</span><h3 className={"h4"} style={{fontSize: "15px"}}>{p.name}</h3><Button variant="link" size="sm" href={"/product"}>View →</Button></div></article>
 </Fragment>))}
 <article className={"card"} style={{alignItems: "center", justifyContent: "center", textAlign: "center", borderStyle: "dashed", background: "#FFFFFF"}}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"} /></svg></div><h3 className={"h4"} style={{fontSize: "15px"}}>More products being added</h3></article>
 </div></div></section>
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Quality promise</p><h2 className={"h2"}>Quality checked at every stage</h2></div></div>
-<div className={"g4"}>
-<div className={"card"}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><circle cx={"9"} cy={"8"} r={"3.5"} /><path d={"M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5 5 0 0 1 3.5 6"} /></svg></div><h3 className={"h4"}>Selected partners</h3><p className={"small"}>Carefully chosen contract manufacturing partners.</p></div>
-<div className={"card"}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"} /><circle cx={"12"} cy={"12"} r={"3"} /></svg></div><h3 className={"h4"}>Stage-wise QC</h3><p className={"small"}>Quality checks at every stage of production.</p></div>
-<div className={"card"}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><circle cx={"12"} cy={"9"} r={"6"} /><path d={"M9 14.5L8 21l4-2 4 2-1-6.5"} /></svg></div><h3 className={"h4"}>Certified</h3><p className={"small"}>Compliance with [BIS / ISI / relevant] standards.</p></div>
-<div className={"card"}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"} /><circle cx={"12"} cy={"10"} r={"2.5"} /></svg></div><h3 className={"h4"}>Ready reach</h3><p className={"small"}>Available through 13 branches and 1,700+ dealers.</p></div>
-</div></div></section>
+<div className={"qp"}>
+<figure className={"qp-img"}><img src={"/media/quality-lab.webp"} alt={"Quality testing of PARKAN products"} loading={"lazy"} /><figcaption className={"qp-seal"}><strong>PARKAN</strong><span>Quality assured</span></figcaption></figure>
+<ol className={"qp-list"}>{QUALITY.map(([title, text, icon], i) => <li key={title}><span className={"qp-node"}>{String(i + 1).padStart(2, '0')}</span><div className={"qp-body"}><h3>{title}</h3><p className={"small"}>{text}</p></div><span className={"qp-ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>{icon}</svg></span></li>)}</ol>
+</div>
+</div></section>
 
 <section className={"sec alt"}><div className={"wrap g2"} style={{gap: "48px", alignItems: "center"}}>
 <div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>From idea to shelf</p><h2 className={"h2"}>How a PARKAN product is made</h2>
@@ -71,12 +78,12 @@ export default function Manufacturing() {
 <div className={"row"} style={{gap: "16px", flexWrap: "nowrap"}}><div className={"stepn"} style={{flex: "none"}}>3</div><p><strong style={{color: "#0E2A52"}}>Contract manufacturing</strong> — with trusted partners</p></div>
 <div className={"row"} style={{gap: "16px", flexWrap: "nowrap"}}><div className={"stepn"} style={{flex: "none"}}>4</div><p><strong style={{color: "#0E2A52"}}>Testing &amp; dispatch</strong> — QC, then to our branches and dealers</p></div>
 </div></div>
-<div className={"g2"} style={{gap: "16px"}}><img src={"/media/electrician-testing.webp"} alt={"Electrician testing an installation with a meter"} loading={"lazy"} style={{width: "100%", height: "200px", borderRadius: "10px", objectFit: "cover", display: "block"}} /><img src={"/media/quality-lab.webp"} alt={"Quality check at an engineering test bench"} loading={"lazy"} style={{width: "100%", height: "200px", borderRadius: "10px", objectFit: "cover", display: "block"}} /><div className={"ph"} style={{height: "200px"}}>CERTIFICATE</div><div className={"ph"} style={{height: "200px"}}>CERTIFICATE</div></div>
+<div className={"g2"} style={{gap: "16px"}}><img src={"/media/electrician-testing.webp"} alt={"Electrician testing an installation with a meter"} loading={"lazy"} style={{width: "100%", height: "200px", borderRadius: "12px", objectFit: "cover", display: "block"}} /><img src={"/media/quality-lab.webp"} alt={"Quality check at an engineering test bench"} loading={"lazy"} style={{width: "100%", height: "200px", borderRadius: "12px", objectFit: "cover", display: "block"}} /><div className={"ph"} style={{height: "200px"}}>CERTIFICATE</div><div className={"ph"} style={{height: "200px"}}>CERTIFICATE</div></div>
 </div></section>
 
 <section className={"sec"}><div className={"wrap"}><div className={"cta"}>
 <div className={"stack"} style={{gap: "10px", maxWidth: "640px"}}><h2 className={"h2"}>Want to stock PARKAN products?</h2><p className={"lead"}>Dealer, distributor and bulk enquiries welcome.</p></div>
-<div className={"row"} style={{gap: "12px"}}><a className={"btn btn-red"} href={"/contact"}>Enquire Now</a><a className={"btn btn-ghost"} href={"/contact"}>Become a Dealer</a></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="accent" href={"/contact"}>Enquire Now</Button><Button variant="secondary" href={"/contact"}>Become a Dealer</Button></div>
 </div></div></section>
 <Footer />
 </div>

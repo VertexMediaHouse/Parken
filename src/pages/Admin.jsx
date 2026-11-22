@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
+import Button from '../Button.jsx'
 
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { published: false }; }
@@ -29,7 +30,7 @@ export default function Admin() {
 <main style={{flex: "999 1 640px", minWidth: "0", padding: "32px 40px", display: "flex", flexDirection: "column", gap: "24px"}}>
 <div className={"row"} style={{justifyContent: "space-between", gap: "16px"}}>
 <div className={"stack"} style={{gap: "4px"}}><p className={"small muted"}><a href={"#"}>Products</a> / Add new product</p><h1 className={"h2"} style={{fontSize: "28px"}}>Add New Product</h1></div>
-<div className={"row"} style={{gap: "10px"}}><a className={"btn btn-line btn-sm"} href={"/products"}>Cancel</a><button type={"button"} className={"btn btn-line btn-sm"}>Save as Draft</button><button type={"button"} className={"btn btn-red btn-sm"} onClick={v.publish}>Publish to Website</button></div>
+<div className={"row"} style={{gap: "10px"}}><Button variant="secondary" size="sm" href={"/products"}>Cancel</Button><Button variant="secondary" size="sm">Save as Draft</Button><Button variant="primary" size="sm" onClick={v.publish}>Publish to Website</Button></div>
 </div>
 {v.published && <><p className={"small"} style={{background: "#EEF3FA", color: "#0E2A52", padding: "14px 16px", borderRadius: "8px", fontWeight: "600"}}>Published. The product is now live on Our Products.</p></>}
 
@@ -46,7 +47,7 @@ export default function Admin() {
 <div className={"field"}><label htmlFor={"a6"}>Short description</label><textarea id={"a6"} className={"input"} placeholder={"One or two lines shown on the product card"}></textarea></div>
 </section>
 
-<section className={"card"} style={{gap: "18px"}}><div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Specifications</h2><button type={"button"} className={"btn btn-line btn-sm"}><svg viewBox={"0 0 24 24"} width={"16"} height={"16"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 5v14M5 12h14"} /></svg> Add row</button></div>
+<section className={"card"} style={{gap: "18px"}}><div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Specifications</h2><Button variant="secondary" size="sm" icon={<svg viewBox={"0 0 24 24"} width={"16"} height={"16"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 5v14M5 12h14"} /></svg>}>Add row</Button></div>
 <div className={"g2"} style={{gap: "12px"}}><input className={"input"} aria-label={"Spec name 1"} defaultValue={"Conductor"} /><input className={"input"} aria-label={"Spec value 1"} defaultValue={"Copper, multi-strand"} /><input className={"input"} aria-label={"Spec name 2"} defaultValue={"Cores"} /><input className={"input"} aria-label={"Spec value 2"} defaultValue={"[3 core]"} /><input className={"input"} aria-label={"Spec name 3"} defaultValue={"Size"} /><input className={"input"} aria-label={"Spec value 3"} defaultValue={"[1.5 sq mm]"} /></div>
 </section>
 
@@ -68,11 +69,11 @@ export default function Admin() {
 </div>
 </div>
 
-<section className={"card"} style={{gap: "14px"}}><div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Recently added</h2><a className={"link small"} href={"#"}>View all products →</a></div>
+<section className={"card"} style={{gap: "14px"}}><div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Recently added</h2><Button variant="link" size="sm" href={"#"}>View all products →</Button></div>
 <div style={{overflowX: "auto"}}><table className={"table"}><thead><tr><th>Product</th><th>Category</th><th>Status</th><th>Updated</th><th></th></tr></thead><tbody>
-<tr><td>Nylon Cable Ties</td><td>Cable Accessories</td><td><span className={"tag"}>Published</span></td><td>[Date]</td><td><a className={"link small"} href={"#"}>Edit</a></td></tr>
-<tr><td>Submersible Wire</td><td>Wires &amp; Cables</td><td><span className={"tag"}>Published</span></td><td>[Date]</td><td><a className={"link small"} href={"#"}>Edit</a></td></tr>
-<tr><td>Surface &amp; Modular Boxes</td><td>Conduits &amp; Boxes</td><td><span className={"tag tag-red"}>Draft</span></td><td>[Date]</td><td><a className={"link small"} href={"#"}>Edit</a></td></tr>
+<tr><td>Nylon Cable Ties</td><td>Cable Accessories</td><td><span className={"tag"}>Published</span></td><td>[Date]</td><td><Button variant="link" size="sm" href={"#"}>Edit</Button></td></tr>
+<tr><td>Submersible Wire</td><td>Wires &amp; Cables</td><td><span className={"tag"}>Published</span></td><td>[Date]</td><td><Button variant="link" size="sm" href={"#"}>Edit</Button></td></tr>
+<tr><td>Surface &amp; Modular Boxes</td><td>Conduits &amp; Boxes</td><td><span className={"tag tag-red"}>Draft</span></td><td>[Date]</td><td><Button variant="link" size="sm" href={"#"}>Edit</Button></td></tr>
 </tbody></table></div></section>
 </main>
 </div>

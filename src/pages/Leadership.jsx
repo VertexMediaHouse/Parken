@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
+import Button from '../Button.jsx'
 
 class Component extends DCLogic {
 renderVals() {
@@ -14,20 +15,20 @@ export default function Leadership() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/site-engineers.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Our Leadership Team</p>
 <p className={"eyebrow"}>Our leadership team</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>Leadership that combines experience with ambition</h1>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>Leadership that combines experience <em>with ambition</em></h1>
 <p className={"lead"}>Our board and advisors bring together decades of industry knowledge and a clear plan for growth, governance and capital-market readiness.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><a href={"/company"}>Overview</a><a href={"/about"}>About Us</a><a className={"on"} href={"/leadership"}>Our Leadership Team</a><a href={"/branches"}>Our Branches</a><a href={"/why-us"}>Why Work With Us</a></div></nav>
+<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Board of directors</p><h2 className={"h2"}>The people who lead Parkan</h2></div></div>
 <div className={"g3"}>
-<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>[Name]</h3><span className={"tag tag-red"}>[Chairman / Managing Director]</span><p className={"small"}>[Founded Pooja Electricals in 2003 and has led the company's growth for over two decades.]</p><a className={"link small"} href={"#"}>LinkedIn profile →</a></div></article>
-<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>Bhavya Jain</h3><span className={"tag tag-red"}>Executive Director</span><p className={"small"}>[2–3 lines on responsibilities and background]</p><a className={"link small"} href={"#"}>LinkedIn profile →</a></div></article>
-<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>[Name]</h3><span className={"tag tag-red"}>[Director]</span><p className={"small"}>[2–3 lines on responsibilities and background]</p><a className={"link small"} href={"#"}>LinkedIn profile →</a></div></article>
+<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>[Name]</h3><span className={"tag tag-red"}>[Chairman / Managing Director]</span><p className={"small"}>[Founded Pooja Electricals in 2003 and has led the company's growth for over two decades.]</p><Button variant="link" size="sm" href={"#"}>LinkedIn profile →</Button></div></article>
+<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>Bhavya Jain</h3><span className={"tag tag-red"}>Executive Director</span><p className={"small"}>[2–3 lines on responsibilities and background]</p><Button variant="link" size="sm" href={"#"}>LinkedIn profile →</Button></div></article>
+<article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>[Name]</h3><span className={"tag tag-red"}>[Director]</span><p className={"small"}>[2–3 lines on responsibilities and background]</p><Button variant="link" size="sm" href={"#"}>LinkedIn profile →</Button></div></article>
 </div></div></section>
 
 
@@ -44,7 +45,7 @@ export default function Leadership() {
 <section className={"sec alt"}><div className={"wrap g2"} style={{gap: "64px", alignItems: "center"}}>
 <div className={"ph"} style={{height: "360px"}}>IMAGE · Team event / Diwali celebration</div>
 <div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Join our team</p><h2 className={"h2"}>Grow your career with a company built on trust</h2><p>We're always looking for sales, project and operations talent across our 13 branches.</p>
-<div className={"row"} style={{gap: "12px"}}><a className={"btn btn-red"} href={"/why-us"}>See Open Roles</a><a className={"btn btn-line"} href={"/contact"}>Send Your CV</a></div></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/why-us"}>See Open Roles</Button><Button variant="secondary" href={"/contact"}>Send Your CV</Button></div></div>
 </div></section>
 <Footer />
 </div>

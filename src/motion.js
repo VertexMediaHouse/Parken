@@ -16,7 +16,7 @@ export function startMotion() {
     c.style.setProperty('--mx', `${e.clientX - r.left}px`); c.style.setProperty('--my', `${e.clientY - r.top}px`)
   }, { passive: true })
 
-  const lenis = new Lenis({ duration: 1.1, smoothWheel: true })
+  const lenis = new Lenis({ lerp: 0.12, smoothWheel: true })
   const raf = t => { lenis.raf(t); requestAnimationFrame(raf) }
   requestAnimationFrame(raf)
 

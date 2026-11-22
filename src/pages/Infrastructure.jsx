@@ -2,6 +2,20 @@ import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
+import Button from '../Button.jsx'
+
+const SERVICES = [
+  ['Inside the building', '/media/electrician-testing.webp', 'Electrician testing a distribution board', [
+    ['Internal wiring', 'Wiring, switches and sockets, and fan installation.', <><path d="M4 20c0-6 4-6 8-8s8-2 8-8" /><circle cx="4" cy="20" r="1.5" /><circle cx="20" cy="4" r="1.5" /></>],
+    ['COB & LED light fittings', 'Indoor lighting for hospitals, offices and institutions.', <><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z" /></>],
+    ['Distribution boards & MCBs', 'Protection and distribution for every floor.', <><rect x="4" y="4" width="7" height="7" rx="1" /><rect x="13" y="4" width="7" height="7" rx="1" /><rect x="4" y="13" width="7" height="7" rx="1" /><rect x="13" y="13" width="7" height="7" rx="1" /></>],
+  ]],
+  ['Power & public spaces', '/media/high-mast.webp', 'High-mast lighting installed by Parkan', [
+    ['HT/LT cabling & panels', 'Power cabling and panels from supply point to load.', <><path d="M13 3l-8 11h7l-1 7 8-11h-7z" /></>],
+    ['Street & high-mast lighting', 'Energy-efficient fixtures, poles and cabling for public roads.', <><path d="M12 21V8M8 8h8M6 4h12" /></>],
+    ['Smart-city & public spaces', 'Lighting for markets, lakefronts, walkways and amphitheatres.', <><path d="M4 21h16M6 21V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16M10 8h1M10 12h1M10 16h1M14 8h1M14 12h1M14 16h1" /></>],
+  ]],
+]
 
 class Component extends DCLogic {
 renderVals() {
@@ -14,16 +28,16 @@ export default function Infrastructure() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/jayadeva-hospital.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / Infrastructure &amp; Projects</p>
 <p className={"eyebrow"}>Vertical 02 · Since 2020</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>Infrastructure &amp; Projects</h1>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>Infrastructure &amp; <em>Projects</em></h1>
 <p className={"lead"}>End-to-end electrical infrastructure – cabling, panels and lighting – for government hospitals, public institutions and smart-city works across Karnataka.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><a href={"/verticals"}>Overview</a><a href={"/trading"}>Trading &amp; Distribution</a><a className={"on"} href={"/infrastructure"}>Infrastructure &amp; Projects</a><a href={"/in-house-brand"}>In-house Brand</a></div></nav>
+<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
 
 <section style={{padding: "56px 0 0"}}><div className={"wrap"}>
-<div className={"g3"} style={{background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "14px", padding: "28px", gap: "0"}}>
+<div className={"g3"} style={{background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "12px", padding: "28px", gap: "0"}}>
 <div className={"stack"} style={{gap: "8px", padding: "0 24px", borderRight: "1px solid #DDE2EA"}}><span className={"stat"}>50+</span><span className={"muted small"}>Government projects completed</span></div>
 <div className={"stack"} style={{gap: "8px", padding: "0 24px", borderRight: "1px solid #DDE2EA"}}><span className={"stat"}>4,100+</span><span className={"muted small"}>Streetlights installed for the PWD</span></div>
 <div className={"stack"} style={{gap: "8px", padding: "0 24px"}}><span className={"stat"}>2020</span><span className={"muted small"}>Execution partner for government infrastructure since</span></div>
@@ -31,18 +45,15 @@ export default function Infrastructure() {
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>What we do</p><h2 className={"h2"}>Complete electrical works, one team</h2></div></div>
-<div className={"g3"}>
-<div className={"card"}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M4 20c0-6 4-6 8-8s8-2 8-8"} /><circle cx={"4"} cy={"20"} r={"1.5"} /><circle cx={"20"} cy={"4"} r={"1.5"} /></svg></div><h3 className={"h4"}>Internal wiring</h3><p className={"small"}>Wiring, switches and sockets, and fan installation.</p></div>
-<div className={"card"}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"} /></svg></div><h3 className={"h4"}>COB &amp; LED light fittings</h3><p className={"small"}>Indoor lighting for hospitals, offices and institutions.</p></div>
-<div className={"card"}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><rect x={"4"} y={"4"} width={"7"} height={"7"} rx={"1"} /><rect x={"13"} y={"4"} width={"7"} height={"7"} rx={"1"} /><rect x={"4"} y={"13"} width={"7"} height={"7"} rx={"1"} /><rect x={"13"} y={"13"} width={"7"} height={"7"} rx={"1"} /></svg></div><h3 className={"h4"}>Distribution boards &amp; MCBs</h3><p className={"small"}>Protection and distribution for every floor.</p></div>
-<div className={"card"}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M13 3l-8 11h7l-1 7 8-11h-7z"} /></svg></div><h3 className={"h4"}>HT/LT cabling &amp; panels</h3><p className={"small"}>Power cabling and panels from supply point to load.</p></div>
-<div className={"card"}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 21V8M8 8h8M6 4h12"} /></svg></div><h3 className={"h4"}>Street &amp; high-mast lighting</h3><p className={"small"}>Energy-efficient fixtures, poles and cabling for public roads.</p></div>
-<div className={"card"}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M4 21h16M6 21V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16M10 8h1M10 12h1M10 16h1M14 8h1M14 12h1M14 16h1"} /></svg></div><h3 className={"h4"}>Smart-city &amp; public spaces</h3><p className={"small"}>Lighting for markets, lakefronts, walkways and amphitheatres.</p></div>
-</div></div></section>
+<div className={"wwd"}>{SERVICES.map(([group, img, alt, list], g) => <div key={group} className={"wwd-col"}>
+<figure className={"wwd-img"}><img src={img} alt={alt} loading={"lazy"} /><figcaption>{group}</figcaption></figure>
+<ul className={"wwd-list"}>{list.map(([title, text, icon]) => <li key={title}><span className={"wwd-ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>{icon}</svg></span><div><h3>{title}</h3><p className={"small"}>{text}</p></div></li>)}</ul>
+</div>)}</div>
+</div></section>
 
 <section className={"sec alt"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Completed projects</p><h2 className={"h2"}>Work we've delivered</h2></div>
-<div className={"row"} style={{gap: "8px"}}><button className={"chip on"} type={"button"}>All</button><button className={"chip"} type={"button"}>Healthcare</button><button className={"chip"} type={"button"}>Smart City</button></div></div>
+<div className={"row"} style={{gap: "8px"}}><Button variant="secondary" size="sm" className="on" aria-pressed={true}>All</Button><Button variant="secondary" size="sm" aria-pressed={false}>Healthcare</Button><Button variant="secondary" size="sm" aria-pressed={false}>Smart City</Button></div></div>
 <div className={"g2"} style={{gap: "24px"}}>
 <article className={"card card-flat"}><img src={"/img/d69f347a7af9b6768177cdac9874b11b.jpg"} alt={"Government Hospital Shirhatti lit up at night"} style={{width: "100%", height: "280px", objectFit: "cover", display: "block"}} /><div className={"body"}><span className={"tag tag-red"}>Healthcare</span><h3 className={"h3"}>Government Hospital</h3>
 <table className={"table"} style={{fontSize: "14px"}}><tbody><tr><td className={"muted"} style={{padding: "6px 0", width: "30%"}}>Location</td><td style={{padding: "6px 0"}}>Shirhatti, Gadag</td></tr><tr><td className={"muted"} style={{padding: "6px 0"}}>Scale</td><td style={{padding: "6px 0"}}>100 beds</td></tr><tr><td className={"muted"} style={{padding: "6px 0"}}>Scope</td><td style={{padding: "6px 0"}}>Complete electrical infrastructure for the taluk hospital</td></tr></tbody></table></div></article>
@@ -73,7 +84,7 @@ export default function Infrastructure() {
 
 <section className={"sec"}><div className={"wrap"}><div className={"cta"}>
 <div className={"stack"} style={{gap: "10px", maxWidth: "640px"}}><h2 className={"h2"}>Have a government or infrastructure requirement?</h2><p className={"lead"}>We partner on government projects, joint ventures and EPC &amp; turnkey works. Share the tender or project details and our projects team will get in touch.</p></div>
-<div className={"row"} style={{gap: "12px"}}><a className={"btn btn-red"} href={"/contact"}>Get in Touch</a><a className={"btn btn-ghost"} href={"#"}><svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"} /><path d={"M14 3v5h5M9 13h6M9 17h6"} /></svg> Company Profile PDF</a></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="accent" href={"/contact"}>Get in Touch</Button><Button variant="secondary" icon={<svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"} /><path d={"M14 3v5h5M9 13h6M9 17h6"} /></svg>} href={"#"}>Company Profile PDF</Button></div>
 </div></div></section>
 <Footer />
 </div>

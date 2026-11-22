@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
+import Button from '../Button.jsx'
 
 class Component extends DCLogic {
 renderVals() {
@@ -14,13 +15,13 @@ export default function WhyUs() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/electrician-testing.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Why Work With Us</p>
 <p className={"eyebrow"}>Why work with us</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>A partner you can rely on, project after project</h1>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>A partner you can rely on, project <em>after project</em></h1>
 <p className={"lead"}>For customers, dealers, contractors, government bodies and business partners — and for the people who want to build their career with us.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><a href={"/company"}>Overview</a><a href={"/about"}>About Us</a><a href={"/leadership"}>Our Leadership Team</a><a href={"/branches"}>Our Branches</a><a className={"on"} href={"/why-us"}>Why Work With Us</a></div></nav>
+<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/why-us"}>Why Work With Us</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>For customers &amp; partners</p><h2 className={"h2"}>Six reasons to choose Parkan</h2></div></div>
@@ -40,7 +41,7 @@ export default function WhyUs() {
 <div className={"card"} style={{gap: "16px", padding: "32px"}}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 1-5-5z"}></path><path d={"M3 21l6-6"}></path></svg></div><h3 className={"h3"}>Infrastructure partnerships</h3><p className={"small"}>Collaborate with us on:</p><div className={"row"} style={{gap: "8px"}}><span className={"tag tag-red"}>Government projects</span><span className={"tag tag-red"}>Joint ventures (JVs)</span><span className={"tag tag-red"}>Registered class contractors</span><span className={"tag tag-red"}>EPC &amp; turnkey projects</span></div></div>
 <div className={"card"} style={{gap: "16px", padding: "32px"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M3 20h18M6 16v-4M11 16V8M16 16v-6M21 4l-5 5-4-3-6 5"}></path></svg></div><h3 className={"h3"}>Strategic investors &amp; mentors</h3><p className={"small"}>For our next phase of growth:</p><div className={"row"} style={{gap: "8px"}}><span className={"tag"}>Capital-market readiness</span><span className={"tag"}>Pre-IPO funding</span><span className={"tag"}>Growth capital</span><span className={"tag"}>Board-level mentorship</span><span className={"tag"}>Governance &amp; compliance</span><span className={"tag"}>Scaling strategy</span></div></div>
 </div>
-<div className={"row"} style={{justifyContent: "center", marginTop: "36px"}}><a className={"btn btn-red"} href={"/contact"}>Talk to Us About a Partnership</a></div>
+<div className={"row"} style={{justifyContent: "center", marginTop: "36px"}}><Button variant="primary" href={"/contact"}>Talk to Us About a Partnership</Button></div>
 </div></section>
 
 <section className={"sec"}><div className={"wrap"}>
@@ -62,9 +63,9 @@ export default function WhyUs() {
 <section className={"sec on-dark"} style={{background: "#0E2A52"}}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Careers</p><h2 className={"h2"} style={{color: "#FFFFFF"}}>Build your career with Parkan</h2></div><p style={{color: "#C9D5E8"}}>Stable growth, hands-on learning across distribution, projects and our own brand, and teams that feel like family.</p></div>
 <div className={"stack"} style={{gap: "12px"}}>
-<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Sales Executive]</h3><p className={"small"}>[Hubballi] · Full-time · [Experience]</p></div><a className={"btn btn-red btn-sm"} href={"/contact"}>Apply Now</a></div>
-<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Site Engineer — Electrical]</h3><p className={"small"}>[Belagavi] · Full-time · [Experience]</p></div><a className={"btn btn-red btn-sm"} href={"/contact"}>Apply Now</a></div>
-<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Warehouse &amp; Logistics Executive]</h3><p className={"small"}>[Ahmedabad] · Full-time · [Experience]</p></div><a className={"btn btn-red btn-sm"} href={"/contact"}>Apply Now</a></div>
+<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Sales Executive]</h3><p className={"small"}>[Hubballi] · Full-time · [Experience]</p></div><Button variant="secondary" size="sm" href={"/contact"}>Apply Now</Button></div>
+<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Site Engineer — Electrical]</h3><p className={"small"}>[Belagavi] · Full-time · [Experience]</p></div><Button variant="secondary" size="sm" href={"/contact"}>Apply Now</Button></div>
+<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "6px"}}><h3 className={"h4"}>[Warehouse &amp; Logistics Executive]</h3><p className={"small"}>[Ahmedabad] · Full-time · [Experience]</p></div><Button variant="secondary" size="sm" href={"/contact"}>Apply Now</Button></div>
 </div>
 <p className={"small"} style={{color: "#C9D5E8", marginTop: "20px"}}>Don't see a role? Email your CV to [careers email].</p>
 </div></section>

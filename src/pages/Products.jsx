@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
+import Button from '../Button.jsx'
 
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { cat: 'all' }; }
@@ -32,21 +33,21 @@ export default function Products() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{paddingBottom: "48px"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/warehouse-racks.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Our Products</p>
 <p className={"eyebrow"}>PARKAN products</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>Our Own Range, Built on 23 Years of Trade Experience</h1>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>Our Own Range, Built on <em>23 Years of Trade Experience</em></h1>
 <p className={"lead"}>Quality electrical products under the PARKAN brand, available through our 13 branches and 1,700+ dealers.</p>
-<div className={"row"} style={{gap: "12px", marginTop: "28px", maxWidth: "760px", flexWrap: "nowrap"}}><label htmlFor={"q"} style={{position: "absolute", left: "-9999px"}}>Search products</label><input id={"q"} className={"input"} type={"search"} placeholder={"Search by product name or size"} style={{minHeight: "56px", border: "0"}} /><button className={"btn btn-red"} type={"button"} style={{minHeight: "56px"}}><svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><circle cx={"11"} cy={"11"} r={"7"}></circle><path d={"M21 21l-5-5"}></path></svg> Search</button></div>
+<div className={"row"} style={{gap: "12px", marginTop: "28px", maxWidth: "760px", flexWrap: "nowrap"}}><label htmlFor={"q"} style={{position: "absolute", left: "-9999px"}}>Search products</label><input id={"q"} className={"input"} type={"search"} placeholder={"Search by product name or size"} style={{minHeight: "56px", border: "0"}} /><Button variant="accent" icon={<svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><circle cx={"11"} cy={"11"} r={"7"}></circle><path d={"M21 21l-5-5"}></path></svg>}>Search</Button></div>
 </div></section>
 
 <nav className={"subnav"} aria-label={"Product categories"}><div className={"wrap"}>
-{v.cats.map((c, i) => (<Fragment key={i}><button type={"button"} className={`chip ${c.cls}`} onClick={c.pick}>{c.label}</button></Fragment>))}
+{v.cats.map((c, i) => (<Fragment key={i}><Button variant="secondary" size="sm" className={c.cls} aria-pressed={c.cls === 'on'} onClick={c.pick}>{c.label}</Button></Fragment>))}
 </div></nav>
 
 <section className={"sec"} style={{paddingTop: "48px"}}><div className={"wrap"} style={{display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "flex-start"}}>
 <aside className={"card"} aria-label={"Filters"} style={{flex: "1 1 260px", maxWidth: "300px", gap: "22px"}}>
-<div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Filters</h2><a className={"link small"} href={"#"}>Clear all</a></div>
+<div className={"row"} style={{justifyContent: "space-between"}}><h2 className={"h4"}>Filters</h2><Button variant="link" size="sm" href={"#"}>Clear all</Button></div>
 <fieldset style={{border: "0", padding: "0", margin: "0"}}><legend className={"h4"} style={{fontSize: "14px", marginBottom: "8px"}}>Range</legend><label className={"chk"}><input type={"checkbox"} defaultChecked={""} /> PARKAN in-house range</label><label className={"chk"}><input type={"checkbox"} /> Channel-partner brands</label></fieldset>
 <fieldset style={{border: "0", padding: "0", margin: "0"}}><legend className={"h4"} style={{fontSize: "14px", marginBottom: "8px"}}>Application</legend><label className={"chk"}><input type={"checkbox"} /> Residential</label><label className={"chk"}><input type={"checkbox"} /> Commercial</label><label className={"chk"}><input type={"checkbox"} /> Industrial</label><label className={"chk"}><input type={"checkbox"} /> Infrastructure projects</label></fieldset>
 <fieldset style={{border: "0", padding: "0", margin: "0"}}><legend className={"h4"} style={{fontSize: "14px", marginBottom: "8px"}}>Material</legend><label className={"chk"}><input type={"checkbox"} /> Copper</label><label className={"chk"}><input type={"checkbox"} /> Aluminium</label><label className={"chk"}><input type={"checkbox"} /> Brass</label><label className={"chk"}><input type={"checkbox"} /> PVC / Nylon</label></fieldset>
@@ -62,16 +63,16 @@ export default function Products() {
 <div className={"body"}><div className={"row"} style={{gap: "6px"}}><span className={"tag"}>{p.cat}</span><span className={"tag tag-red"}>PARKAN</span></div>
 <h3 className={"h4"}>{p.name}</h3>
 <p className={"small"}>{p.spec}</p>
-<div className={"row"} style={{gap: "8px", marginTop: "6px"}}><a className={"btn btn-blue btn-sm"} href={"/product"}>View Details</a><a className={"btn btn-line btn-sm"} href={"/contact"}>Enquire Now</a></div></div></article>
+<div className={"row"} style={{gap: "8px", marginTop: "6px"}}><Button variant="secondary" size="sm" href={"/product"}>View Details</Button><Button variant="secondary" size="sm" href={"/contact"}>Enquire Now</Button></div></div></article>
 </Fragment>))}
 </div>
-<div className={"card"} style={{flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "16px", background: "#EEF3FA", borderColor: "#EEF3FA"}}><div className={"stack"} style={{gap: "4px"}}><h3 className={"h4"}>More PARKAN products being added</h3><p className={"small"}>Looking for Legrand, Havells, Polycab, Schneider and other brands? We supply those too.</p></div><a className={"btn btn-line btn-sm"} href={"/trading"}>Brands we distribute</a></div>
+<div className={"card"} style={{flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "16px", background: "#EEF3FA", borderColor: "#EEF3FA"}}><div className={"stack"} style={{gap: "4px"}}><h3 className={"h4"}>More PARKAN products being added</h3><p className={"small"}>Looking for Legrand, Havells, Polycab, Schneider and other brands? We supply those too.</p></div><Button variant="secondary" size="sm" href={"/trading"}>Brands we distribute</Button></div>
 </div>
 </div></section>
 
 <section className={"sec alt"}><div className={"wrap"}><div className={"cta"}>
 <div className={"stack"} style={{gap: "10px", maxWidth: "640px"}}><h2 className={"h2"}>Interested in PARKAN products for your project or store?</h2><p className={"lead"}>Dealer and bulk enquiries welcome. Download the catalogue or talk to our sales team.</p></div>
-<div className={"row"} style={{gap: "12px"}}><a className={"btn btn-red"} href={"/contact"}>Enquire Now</a><a className={"btn btn-ghost"} href={"#"}><svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"}></path><path d={"M14 3v5h5M9 13h6M9 17h6"}></path></svg> Download Catalogue</a></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/contact"}>Enquire Now</Button><Button variant="secondary" icon={<svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"}></path><path d={"M14 3v5h5M9 13h6M9 17h6"}></path></svg>} href={"#"}>Download Catalogue</Button></div>
 </div></div></section>
 <Footer />
 </div>
