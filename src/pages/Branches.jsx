@@ -31,7 +31,7 @@ export default function Branches() {
 <nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
 
 <section className={"sec"} style={{paddingBottom: "56px"}}><div className={"wrap g2"} style={{gap: "56px", alignItems: "center"}}>
-<img src={"/img/0ff6f04e8e1bc90dfbcd5e8087794c6a.jpg"} alt={"Map of western India showing Parkan Group branches: head office in Hubballi, branches in Belagavi, Margao, Shivamogga, Mangaluru, Bengaluru and Ahmedabad"} style={{width: "100%", height: "560px", objectFit: "contain", background: "#0E2A52", borderRadius: "12px", display: "block"}} />
+<img src={"/img/0ff6f04e8e1bc90dfbcd5e8087794c6a.jpg"} alt={"Map of western India showing Parkan Group branches: head office in Hubballi, branches in Belagavi, Margao, Shivamogga, Mangaluru, Bengaluru and Ahmedabad"} style={{width: "100%", height: "auto", maxHeight: "620px", aspectRatio: "1189 / 1390", objectFit: "cover", objectPosition: "top", background: "#0E2A52", borderRadius: "12px", display: "block"}} />
 <div className={"stack"} style={{gap: "20px"}}>
 <p className={"eyebrow"} style={{margin: "0"}}>Our network</p>
 <h2 className={"h2"}>Three states, one reliable supply chain</h2>

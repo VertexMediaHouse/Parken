@@ -1,8 +1,14 @@
 import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
-import Header from '../Header.jsx'
+import Header, { Arrow } from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+
+const PARTNERS = [
+  ['Business introductions', 'We work with:', ['Builders', 'Developers', 'Distributors', 'Manufacturers', 'Interior designers', 'Architects', 'Factories & industrial units', 'Energy service companies'], 'M9 11.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5 5 0 0 1 3.5 6'],
+  ['Infrastructure partnerships', 'Collaborate with us on:', ['Government projects', 'Joint ventures (JVs)', 'Registered class contractors', 'EPC & turnkey projects'], 'M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 1-5-5zM3 21l6-6'],
+  ['Strategic investors & mentors', 'For our next phase of growth:', ['Capital-market readiness', 'Pre-IPO funding', 'Growth capital', 'Board-level mentorship', 'Governance & compliance', 'Scaling strategy'], 'M3 20h18M6 16v-4M11 16V8M16 16v-6M21 4l-5 5-4-3-6 5'],
+]
 
 class Component extends DCLogic {
 renderVals() {
@@ -35,13 +41,16 @@ export default function WhyUs() {
 </div></div></section>
 
 <section className={"sec alt"}><div className={"wrap"}>
-<div className={"sechead"}><div><p className={"eyebrow"}>Partner with us</p><h2 className={"h2"}>Let's grow together</h2></div><p>We welcome partnerships and collaboration with businesses, contractors and investors.</p></div>
+<div className={"sechead split"}><div><p className={"kicker"}>Partner with us</p><h2 className={"h2"}>Let's Grow <em>Together.</em></h2></div><p>We welcome partnerships and collaboration with businesses, contractors and investors.</p></div>
 <div className={"g3"}>
-<div className={"card"} style={{gap: "16px", padding: "32px"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><circle cx={"9"} cy={"8"} r={"3.5"}></circle><path d={"M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5 5 0 0 1 3.5 6"}></path></svg></div><h3 className={"h3"}>Business introductions</h3><p className={"small"}>We work with:</p><div className={"row"} style={{gap: "8px"}}><span className={"tag"}>Builders</span><span className={"tag"}>Developers</span><span className={"tag"}>Distributors</span><span className={"tag"}>Manufacturers</span><span className={"tag"}>Interior designers</span><span className={"tag"}>Architects</span><span className={"tag"}>Factories &amp; industrial units</span><span className={"tag"}>Energy service companies</span></div></div>
-<div className={"card"} style={{gap: "16px", padding: "32px"}}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 1-5-5z"}></path><path d={"M3 21l6-6"}></path></svg></div><h3 className={"h3"}>Infrastructure partnerships</h3><p className={"small"}>Collaborate with us on:</p><div className={"row"} style={{gap: "8px"}}><span className={"tag tag-red"}>Government projects</span><span className={"tag tag-red"}>Joint ventures (JVs)</span><span className={"tag tag-red"}>Registered class contractors</span><span className={"tag tag-red"}>EPC &amp; turnkey projects</span></div></div>
-<div className={"card"} style={{gap: "16px", padding: "32px"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M3 20h18M6 16v-4M11 16V8M16 16v-6M21 4l-5 5-4-3-6 5"}></path></svg></div><h3 className={"h3"}>Strategic investors &amp; mentors</h3><p className={"small"}>For our next phase of growth:</p><div className={"row"} style={{gap: "8px"}}><span className={"tag"}>Capital-market readiness</span><span className={"tag"}>Pre-IPO funding</span><span className={"tag"}>Growth capital</span><span className={"tag"}>Board-level mentorship</span><span className={"tag"}>Governance &amp; compliance</span><span className={"tag"}>Scaling strategy</span></div></div>
+{PARTNERS.map(([title, intro, tags, d], i) => <article key={title} className={'ptncard' + (i === 1 ? ' dark' : '')}>
+<div className="ptntop"><span className="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d}></path></svg></span><span className="vnum">0{i + 1}</span></div>
+<h3 className="h3">{title}</h3>
+<p className="small">{intro}</p>
+<div className="row" style={{gap: "8px"}}>{tags.map(t => <span key={t} className="tag">{t}</span>)}</div>
+</article>)}
 </div>
-<div className={"row"} style={{justifyContent: "center", marginTop: "36px"}}><Button variant="primary" href={"/contact"}>Talk to Us About a Partnership</Button></div>
+<div className={"row"} style={{justifyContent: "center", marginTop: "40px"}}><Button href={"/contact"} iconRight={<Arrow />}>Talk to Us About a Partnership</Button></div>
 </div></section>
 
 <section className={"sec"}><div className={"wrap"}>

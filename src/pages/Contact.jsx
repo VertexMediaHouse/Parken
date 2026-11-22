@@ -109,7 +109,7 @@ export default function Contact() {
 <section className={"sec alt"}><div className={"wrap g2"} style={{gap: "48px", alignItems: "start"}}>
 <div className={"stack"} style={{gap: "20px"}}>
 <p className={"eyebrow"} style={{margin: "0"}}>Our branches</p><h2 className={"h2"}>Visit your nearest branch</h2>
-<div style={{overflowX: "auto"}}><table className={"table"} style={{background: "#FFFFFF", borderRadius: "12px", overflow: "hidden"}}><thead><tr><th>Branch</th><th>State</th><th>Phone</th><th></th></tr></thead><tbody>
+<div style={{overflowX: "auto"}}><table className={"table table-stack"} style={{background: "#FFFFFF", borderRadius: "12px", overflow: "hidden"}}><thead><tr><th>Branch</th><th>State</th><th>Phone</th><th></th></tr></thead><tbody>
 {branchRows.map(b => (<tr key={b.name}><td>{b.tag ? <><strong>{b.name}</strong> <span className={b.tag === 'HO' ? 'tag tag-red' : 'tag'}>{b.tag}</span></> : b.name}</td><td>{b.state}</td><td>{b.phone ? <Button variant="link" size="sm" href={'tel:' + b.phone.replace(/\s/g, '')}>{b.phone}</Button> : <a className={"small muted"} href={"tel:+919844038260"}>via HO · +91 98440 38260</a>}</td><td><Button variant="link" size="sm" href={b.dir} target={"_blank"} rel={"noopener"}>Directions</Button></td></tr>))}
 </tbody></table></div>
 <Button variant="link" href={"/branches"}>See all 13 branches →</Button>

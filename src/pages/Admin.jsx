@@ -15,7 +15,7 @@ export default function Admin() {
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 
 <div style={{display: "flex", flexWrap: "wrap", minHeight: "1500px", background: "#F4F6F9"}}>
-<aside style={{flex: "1 1 240px", maxWidth: "260px", background: "#0B2143", padding: "24px 16px", display: "flex", flexDirection: "column", gap: "6px"}}>
+<aside className={"adminnav"} style={{flex: "1 1 240px", maxWidth: "260px", background: "#0B2143", padding: "24px 16px", display: "flex", flexDirection: "column", gap: "6px"}}>
 <span className={"logochip"} style={{marginBottom: "20px"}}><img src={"/img/69c175a88a5363f02583985878053bcf.png"} alt={"Parkan Group"} style={{height: "40px", display: "block"}} /></span>
 <a href={"#"} style={{display: "flex", gap: "12px", alignItems: "center", minHeight: "44px", padding: "0 14px", borderRadius: "8px", color: "#C9D5E8", textDecoration: "none", fontSize: "14px"}}><svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M3 11l9-7 9 7M5 10v10h14V10"} /></svg> Dashboard</a>
 <a href={"#"} style={{display: "flex", gap: "12px", alignItems: "center", minHeight: "44px", padding: "0 14px", borderRadius: "8px", color: "#FFFFFF", background: "#184A8C", textDecoration: "none", fontSize: "14px", fontWeight: "600"}}><svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 3l8 4.5v9L12 21l-8-4.5v-9z"} /><path d={"M4 7.5l8 4.5 8-4.5M12 12v9"} /></svg> Products</a>

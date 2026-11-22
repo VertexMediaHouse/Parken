@@ -818,3 +818,94 @@ section img[style*="border-radius"]{border-radius:var(--r)!important}
   .slots{grid-template-columns:repeat(2,minmax(0,1fr))}
   .slots .btn{--h:44px}
 }
+
+/* home: partner with us */
+.ptncard{display:flex;flex-direction:column;gap:14px;padding:32px;background:#fff;border-radius:22px;box-shadow:0 20px 40px -24px rgba(14,42,82,.3);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.ptncard:hover{transform:translateY(-6px);box-shadow:0 30px 50px -24px rgba(14,42,82,.4)}
+.ptntop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.ptncard .vico{justify-content:flex-start}
+.ptncard.dark{background:var(--navy)}
+.ptncard.dark .h3{color:#fff}
+.ptncard.dark p{color:#C9D5E8}
+.ptncard.dark .vnum{color:rgba(255,255,255,.18)}
+.ptncard.dark .tag{background:rgba(255,255,255,.1);color:#fff}
+.ptncard:hover .vnum{color:var(--red)}
+
+/* ==== responsive pass: phone + tablet fixes ====
+   Note: React serialises inline styles with a space after the colon ("flex-direction: row"),
+   so attribute selectors here must match that form. */
+
+/* reduced motion: the marquee's duplicated half shows as a second copy of every logo */
+@media (prefers-reduced-motion:reduce){.track>[aria-hidden]{display:none}}
+
+/* hit areas: pager dots look 10px but take a 24px tap */
+.pdots{gap:0}
+.pdots button{box-sizing:content-box;padding:7px;background-clip:content-box}
+
+/* branch finder: the address line keeps its pin beside the text */
+.bline:nth-child(2){flex-wrap:nowrap;align-items:flex-start}
+.bline:nth-child(2) svg{margin-top:2px}
+
+/* tablet: product and project card grids keep two columns instead of one long stack */
+@media (min-width:561px) and (max-width:900px){
+  .g3:has(>.card-flat),.g3:has(>article){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media (max-width:900px){
+  /* stat strips (inline borders between columns) */
+  :is(.g2,.g3,.g4,.g5)>[style*="border-right"]{border-right:0!important}
+  :is(.g3,.g4)[style*="gap: 0"]{row-gap:24px!important}
+  /* tall inline photos */
+  section img[style*="height: 400px"],section img[style*="height: 360px"],section img[style*="height: 340px"]{height:280px!important}
+  section img[style*="height: 520px"]{height:340px!important}
+  /* products: filter panel spans the width */
+  aside.card[aria-label="Filters"]{max-width:none!important;flex-basis:100%!important}
+  /* admin: sidebar becomes a wrapped bar on top */
+  .adminnav{max-width:none!important;flex-basis:100%!important;flex-direction:row!important;flex-wrap:wrap;align-items:center}
+  .adminnav .logochip{margin:0 12px 0 0!important}
+}
+/* old rule forced 12px/8px padding on any padded g4's children; stat strips now handled above */
+@media (max-width:900px){.g4[style*="padding"]>*{padding:0 8px!important}}
+
+@media (max-width:560px){
+  /* image + text cards side by side (Company hub) stack on phones */
+  .card[style*="flex-direction: row"]{flex-direction:column!important;align-items:stretch!important}
+  .card[style*="flex-direction: row"]>img{width:100%!important;height:180px!important}
+  /* stat strips and the home stat cards go 2 x 2 */
+  .g4[style*="gap: 0"],.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats{gap:12px;margin-top:40px}
+  .statcard{padding:20px 16px;border-radius:18px;font-size:14px}
+  .statcard>svg{width:32px;height:32px;margin-bottom:2px}
+  .statcard .stat{font-size:38px}
+  .g4[style*="gap: 0"] .stat{font-size:36px!important}
+  :is(.g3,.g4)[style*="gap: 0"]{padding:24px 16px!important}
+  /* image-only grids (product shots, gallery thumbs) stay multi-column */
+  .g2:has(>img){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g2>img[style*="height"]{height:150px!important}
+  .g4:has(>img){grid-template-columns:repeat(4,minmax(0,1fr))}
+  .g4>img[style*="height"]{height:72px!important}
+  /* home hero eyebrow: tighter tracking so lines don't orphan a word */
+  .hx-eyebrow{font-size:12px;letter-spacing:.16em}
+  .hx-eyebrow span{gap:10px}
+  .hx-eyebrow span:before{width:20px}
+  /* footer: 44px link targets, "Follow Us" on one line */
+  .footer{padding-top:64px}
+  .footer .fcol a{padding:11px 0}
+  .footer .fbottom{margin-top:48px;flex-direction:column;align-items:flex-start;font-size:14px}
+  .follow{gap:8px;flex-wrap:wrap}
+  .follow>span{white-space:nowrap;padding-right:12px}
+  /* branch table on Contact becomes stacked rows instead of a sideways-scrolling table */
+  .table-stack thead{display:none}
+  .table-stack tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 16px;border-bottom:1px solid #EDF0F4}
+  .table-stack td{padding:0;border:0}
+  .table-stack td:nth-child(2){grid-row:2;color:var(--ink-2);font-size:13px}
+  .table-stack td:nth-child(3){grid-column:1/-1}
+  .table-stack td:nth-child(4){grid-row:1;grid-column:2;text-align:right}
+}
+/* the Products dropdown sits near the right edge: anchor it right so it never widens the page */
+.dd+.dd .ddm{left:auto;right:0;transform-origin:top right}
+/* touch tablets get 44px targets too */
+@media (max-width:900px){.btn-sm{--h:var(--btn-h-md)}.chk{min-height:44px}}
+/* home "three verticals" row: 1fr columns refused to shrink and pushed the page wider at ~1024px */
+.vrow{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1200px){.vrow{grid-template-columns:minmax(0,1fr);gap:14px}.vrow a{padding:0;border:0}}

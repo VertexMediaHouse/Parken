@@ -7,6 +7,10 @@ export function startMotion() {
   const onScroll = () => nav?.classList.toggle('is-scrolled', scrollY > 8)
   addEventListener('scroll', onScroll, { passive: true }); onScroll()
 
+  // section tabs scroll sideways on phones: bring the current one into view
+  const tab = document.querySelector('.subnav .on'), bar = tab?.parentElement
+  if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollLeft += tab.getBoundingClientRect().left - bar.getBoundingClientRect().left - 16
+
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   // card spotlight: feed cursor position to the card's :after gradient
