@@ -18,13 +18,13 @@ export default function Leadership() {
 <section className={"pagehead on-dark"} style={{"--bg": "url(/media/site-engineers.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Our Leadership Team</p>
 <p className={"eyebrow"}>Our leadership team</p>
-<h1 className={"h1"} style={{marginBottom: "16px"}}>Leadership that combines experience <em>with ambition</em></h1>
-<p className={"lead"}>Our board and advisors bring together decades of industry knowledge and a clear plan for growth, governance and capital-market readiness.</p>
+<h1 className={"h1"} style={{marginBottom: "16px"}}>Experience <em>meets ambition</em></h1>
+<p className={"lead"}>Decades of industry experience and a clear plan for growth.</p>
 </div></section>
 <nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap"}>
-<div className={"sechead"}><div><p className={"eyebrow"}>Board of directors</p><h2 className={"h2"}>The people who lead Parkan</h2></div></div>
+<div className={"sechead"}><div><p className={"eyebrow"}>Board of directors</p><h2 className={"h2"}>Our leaders</h2></div></div>
 <div className={"g3"}>
 <article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>[Name]</h3><span className={"tag tag-red"}>[Chairman / Managing Director]</span><p className={"small"}>[Founded Pooja Electricals in 2003 and has led the company's growth for over two decades.]</p><Button variant="link" size="sm" href={"#"}>LinkedIn profile →</Button></div></article>
 <article className={"card card-flat"}><div className={"ph"} style={{height: "320px", borderRadius: "0", borderWidth: "0 0 1px 0"}}>PORTRAIT PHOTO</div><div className={"body"}><h3 className={"h3"}>Bhavya Jain</h3><span className={"tag tag-red"}>Executive Director</span><p className={"small"}>[2–3 lines on responsibilities and background]</p><Button variant="link" size="sm" href={"#"}>LinkedIn profile →</Button></div></article>
@@ -34,7 +34,7 @@ export default function Leadership() {
 
 
 <section className={"sec"}><div className={"wrap"}>
-<div className={"sechead"}><div><p className={"eyebrow"}>Our team</p><h2 className={"h2"}>The faces behind every delivery and every project</h2></div><p>Branch teams, project engineers, sales and support — grouped by branch or department.</p></div>
+<div className={"sechead"}><div><p className={"eyebrow"}>Our team</p><h2 className={"h2"}>Our team</h2></div><p>Branch, project, sales and support teams.</p></div>
 <div className={"g4"}>
 <div className={"stack"} style={{gap: "10px"}}><div className={"ph"} style={{height: "220px"}}>TEAM PHOTO</div><h3 className={"h4"}>Hubballi · Head Office</h3><p className={"small"}>[Team size] · Sales, accounts, operations</p></div>
 <div className={"stack"} style={{gap: "10px"}}><div className={"ph"} style={{height: "220px"}}>TEAM PHOTO</div><h3 className={"h4"}>Projects team</h3><p className={"small"}>[Team size] · Engineers &amp; site supervisors</p></div>
@@ -44,7 +44,7 @@ export default function Leadership() {
 
 <section className={"sec alt"}><div className={"wrap g2"} style={{gap: "64px", alignItems: "center"}}>
 <div className={"ph"} style={{height: "360px"}}>IMAGE · Team event / Diwali celebration</div>
-<div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Join our team</p><h2 className={"h2"}>Grow your career with a company built on trust</h2><p>We're always looking for sales, project and operations talent across our 13 branches.</p>
+<div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Join our team</p><h2 className={"h2"}>Grow with us</h2><p>We hire sales, project and operations talent across 13 branches.</p>
 <div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/why-us"}>See Open Roles</Button><Button variant="secondary" href={"/contact"}>Send Your CV</Button></div></div>
 </div></section>
 <Footer />

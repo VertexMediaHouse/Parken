@@ -1,20 +1,15 @@
+import { CaretLeft, CaretRight, Buildings, CalendarBlank, EnvelopeSimple, MapPin, Phone } from '@phosphor-icons/react'
 import { Fragment } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button, { IconButton } from '../Button.jsx'
+import { branches, directions } from '../branches.js'
 
 const EMAIL = 'parkanenterprisesltd@gmail.com'
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
 const WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
-const mapUrl = q => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q)
-export const branchRows = [
-  ['Hubballi', 'Karnataka', '+91 98440 38260', 'HO'],
-  ['Belagavi', 'Karnataka'], ['Shivamogga', 'Karnataka'], ['Mangaluru', 'Karnataka'], ['Bengaluru', 'Karnataka'],
-  ['Margao', 'Goa'],
-  ['Ahmedabad', 'Gujarat', '+91 77967 12003', 'Regd. office', 'C-319, City Center, near Prem Darwaja, Girdhar Nagar, Ahmedabad'],
-  ['Odhav Warehouse', 'Gujarat', null, null, 'Odhav, Ahmedabad, Gujarat'],
-].map(([name, state, phone, tag, q]) => ({ name, state, phone, tag, dir: mapUrl(q ?? `Parkan Enterprises, ${name}, ${state}`) }))
+export const branchRows = branches.map(b => ({ name: b.name, state: b.state, phone: b.phone, tag: b.tag === 'Branch' ? null : 'Regd. office', dir: directions(b) }))
 
 class Component extends DCLogic {
   // y/m/today stay null on the server; mount() fills them in the browser so the calendar is always the real month
@@ -65,15 +60,15 @@ export default function Contact() {
 <p className={"crumb"}><a href={"/"}>Home</a> / Contact Us</p>
 <p className={"eyebrow"}>Contact us</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Let's Work <em>Together</em></h1>
-<p className={"lead"}>Whether you need electrical supplies, are planning an infrastructure project, want to stock PARKAN products or explore a partnership, our team is ready to help.</p>
+<p className={"lead"}>Supplies, projects, dealership or partnership: we are ready to help.</p>
 </div></section>
 
 <div className={"wrap"} style={{marginTop: "-32px", position: "relative"}}>
 <div className={"g4"}>
-<a className={"card"} href={"tel:+919844038260"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"}></path></svg></div><h2 className={"h4"}>Call us</h2><p className={"small"}>+91 98440 38260<br />+91 94488 38977</p></a>
-<a className={"card"} href={"mailto:parkanenterprisesltd@gmail.com"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><rect x={"3"} y={"5"} width={"18"} height={"14"} rx={"2"}></rect><path d={"M3 7l9 6 9-6"}></path></svg></div><h2 className={"h4"}>Email us</h2><p className={"small"} style={{overflowWrap: "anywhere"}}>parkanenterprisesltd@gmail.com</p></a>
-<a className={"card"} href={"/branches"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico ico-red"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"}></path><circle cx={"12"} cy={"10"} r={"2.5"}></circle></svg></div><h2 className={"h4"}>Head office</h2><p className={"small"}>Hubballi, Karnataka<br />Mon–Sat, 9:30 am – 7:00 pm</p></a>
-<a className={"card"} href={"/branches"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><path d={"M4 21h16M6 21V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16M10 8h1M10 12h1M10 16h1M14 8h1M14 12h1M14 16h1"}></path></svg></div><h2 className={"h4"}>Registered office</h2><p className={"small"}>C-319, City Center, near Prem Darwaja, Girdhar Nagar, Ahmedabad</p></a>
+<a className={"card"} href={"tel:+919274337813"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><Phone /></div><h2 className={"h4"}>Call us</h2><p className={"small"}>+91 92743 37813</p></a>
+<a className={"card"} href={"mailto:parkanenterprisesltd@gmail.com"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><EnvelopeSimple /></div><h2 className={"h4"}>Email us</h2><p className={"small"} style={{overflowWrap: "anywhere"}}>parkanenterprisesltd@gmail.com</p></a>
+<a className={"card"} href={"/branches"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico ico-red"}><MapPin /></div><h2 className={"h4"}>Head office</h2><p className={"small"}>Hubballi, Karnataka<br />Mon–Sat, 9:30 am – 7:00 pm</p></a>
+<a className={"card"} href={"/branches"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><Buildings /></div><h2 className={"h4"}>Registered office</h2><p className={"small"}>C-319, City Center, near Prem Darwaja, Girdhar Nagar, Ahmedabad</p></a>
 </div></div>
 
 <section className={"sec"}><div className={"wrap"}><div className={"enq"}>
@@ -88,13 +83,13 @@ export default function Contact() {
 <div className={"field"}><label htmlFor={"f6"}>Enquiry type *</label><select id={"f6"} name={"type"} className={"input"}><option>Product Supply</option><option>Infrastructure Project</option><option>PARKAN Products</option><option>Dealership</option><option>Partnership / Investment</option><option>Careers</option><option>Other</option></select></div>
 </div>
 <div className={"field enq-msg"}><label htmlFor={"f7"}>Message</label><textarea id={"f7"} name={"message"} className={"input"} placeholder={"Tell us what you need — products, quantities, project location, timelines"}></textarea></div>
-<div className={"row"} style={{gap: "12px"}}><Button size="lg" type={"submit"} loading={v.sending}>Submit Enquiry</Button><Button variant="secondary" size="lg" href={"https://wa.me/919844038260"} target={"_blank"} rel={"noopener"}>Or WhatsApp us</Button></div>
-{v.sent && <><p className={"small"} role={"status"} style={{background: "#EEF3FA", color: "#0E2A52", padding: "14px 16px", borderRadius: "12px"}}>Your email app should now open with the enquiry filled in — press send there. If nothing opened, write to parkanenterprisesltd@gmail.com or call +91 98440 38260.</p></>}
+<div className={"row"} style={{gap: "12px"}}><Button size="lg" type={"submit"} loading={v.sending}>Submit Enquiry</Button><Button variant="secondary" size="lg" href={"https://wa.me/919274337813"} target={"_blank"} rel={"noopener"}>Or WhatsApp us</Button></div>
+{v.sent && <><p className={"small"} role={"status"} style={{background: "#EEF3FA", color: "#0E2A52", padding: "14px 16px", borderRadius: "8px"}}>Your email app should now open with the enquiry filled in — press send there. If nothing opened, write to parkanenterprisesltd@gmail.com or call +91 92743 37813.</p></>}
 </form>
 
 <div className={"enq-book"}>
 <div className={"stack"} style={{gap: "8px"}}><p className={"eyebrow"} style={{margin: "0"}}>Book a meeting</p><h2 className={"h2"} style={{fontSize: "30px"}}>Pick a date &amp; time</h2><p className={"small"}>Meet us at a branch, on a call or on video. Mon–Sat, 10:00 am – 6:00 pm.</p></div>
-<div className={"row"} style={{justifyContent: "space-between"}}><IconButton size="sm" label={"Previous month"} disabled={!v.canPrev} onClick={v.prev} icon={"‹"} /><span className={"h4"} aria-live={"polite"}>{v.monthLabel}</span><IconButton size="sm" label={"Next month"} disabled={!v.monthLabel} onClick={v.next} icon={"›"} /></div>
+<div className={"row"} style={{justifyContent: "space-between"}}><IconButton size="sm" label={"Previous month"} disabled={!v.canPrev} onClick={v.prev} icon={<CaretLeft size={18} />} /><span className={"h4"} aria-live={"polite"}>{v.monthLabel}</span><IconButton size="sm" label={"Next month"} disabled={!v.monthLabel} onClick={v.next} icon={<CaretRight size={18} />} /></div>
 <div className={"cal"}>
 <span className={"cal-wd"}>Mon</span><span className={"cal-wd"}>Tue</span><span className={"cal-wd"}>Wed</span><span className={"cal-wd"}>Thu</span><span className={"cal-wd"}>Fri</span><span className={"cal-wd"}>Sat</span><span className={"cal-wd"}>Sun</span>
 {v.days.map((d, i) => (<Fragment key={i}>{d.n ? <Button variant="secondary" iconOnly fullWidth className={d.cls} aria-pressed={d.cls === 'on'} disabled={d.off} onClick={d.pick}>{d.n}</Button> : <span></span>}</Fragment>))}
@@ -102,22 +97,22 @@ export default function Contact() {
 <div className={"stack"} style={{gap: "10px"}}><span className={"h4"} style={{fontSize: "14px"}}>Available slots · {v.dateLabel}</span>
 <div className={"slots"}>{v.slots.map((s, i) => (<Fragment key={i}><Button variant="secondary" size="sm" className={s.cls} aria-pressed={s.cls === 'on'} onClick={s.pick}>{s.t}</Button></Fragment>))}</div></div>
 <div className={"field"}><label htmlFor={"m1"}>Meeting type</label><select id={"m1"} className={"input"}><option>Visit a branch</option><option>Phone call</option><option>Video call</option><option>Site visit</option></select></div>
-<Button variant={v.picked ? "primary" : "secondary"} fullWidth className={"enq-cta"} icon={<svg viewBox={"0 0 24 24"} width={"18"} height={"18"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.8"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}><rect x={"4"} y={"5"} width={"16"} height={"16"} rx={"2"}></rect><path d={"M16 3v4M8 3v4M4 11h16"}></path></svg>} onClick={v.book} disabled={!v.picked}>{v.picked ? `Request ${v.dateLabel}, ${v.slot}` : 'Pick a date to request a meeting'}</Button>
+<Button variant={v.picked ? "primary" : "secondary"} fullWidth className={"enq-cta"} icon={<CalendarBlank size={18} />} onClick={v.book} disabled={!v.picked}>{v.picked ? `Request ${v.dateLabel}, ${v.slot}` : 'Pick a date to request a meeting'}</Button>
 </div>
 </div></div></section>
 
-<section className={"sec alt"}><div className={"wrap g2"} style={{gap: "48px", alignItems: "start"}}>
+<section className={"sec alt"}><div className={"wrap g2 duo"} style={{gap: "48px"}}>
 <div className={"stack"} style={{gap: "20px"}}>
 <p className={"eyebrow"} style={{margin: "0"}}>Our branches</p><h2 className={"h2"}>Visit your nearest branch</h2>
-<div style={{overflowX: "auto"}}><table className={"table table-stack"} style={{background: "#FFFFFF", borderRadius: "12px", overflow: "hidden"}}><thead><tr><th>Branch</th><th>State</th><th>Phone</th><th></th></tr></thead><tbody>
-{branchRows.map(b => (<tr key={b.name}><td>{b.tag ? <><strong>{b.name}</strong> <span className={b.tag === 'HO' ? 'tag tag-red' : 'tag'}>{b.tag}</span></> : b.name}</td><td>{b.state}</td><td>{b.phone ? <Button variant="link" size="sm" href={'tel:' + b.phone.replace(/\s/g, '')}>{b.phone}</Button> : <a className={"small muted"} href={"tel:+919844038260"}>via HO · +91 98440 38260</a>}</td><td><Button variant="link" size="sm" href={b.dir} target={"_blank"} rel={"noopener"}>Directions</Button></td></tr>))}
+<div style={{overflowX: "auto"}}><table className={"table table-stack"} style={{background: "#FFFFFF", borderRadius: "8px", overflow: "hidden"}}><thead><tr><th>Branch</th><th>State</th><th>Phone</th><th></th></tr></thead><tbody>
+{branchRows.map(b => (<tr key={b.name}><td>{b.tag ? <><strong>{b.name}</strong> <span className={b.tag === 'HO' ? 'tag tag-red' : 'tag'}>{b.tag}</span></> : b.name}</td><td>{b.state}</td><td>{b.phone ? <Button variant="link" size="sm" href={'tel:' + b.phone.replace(/\s/g, '')}>{b.phone}</Button> : <a className={"small muted"} href={"tel:+919274337813"}>via HO · +91 92743 37813</a>}</td><td><Button variant="link" size="sm" href={b.dir} target={"_blank"} rel={"noopener"}>Directions</Button></td></tr>))}
 </tbody></table></div>
 <Button variant="link" href={"/branches"}>See all 13 branches →</Button>
 </div>
 <div className={"stack"} style={{gap: "20px"}}>
 <iframe className={"map"} title={"Map of Hubballi, Karnataka, where Parkan's head office is"} src={"https://www.google.com/maps?q=Hubballi,+Karnataka&z=12&output=embed"} loading={"lazy"} referrerPolicy={"no-referrer-when-downgrade"} style={{height: "420px"}}></iframe>
-<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "4px"}}><h3 className={"h4"}>Quickest reply: WhatsApp</h3><p className={"small"}>Send a product list or a site photo and we'll quote from the nearest branch.</p></div>
-<div className={"row"} style={{gap: "8px"}}><Button variant="secondary" size="sm" href={"https://wa.me/919844038260"} target={"_blank"} rel={"noopener"}>WhatsApp +91 98440 38260</Button></div></div>
+<div className={"card"} style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap"}}><div className={"stack"} style={{gap: "4px"}}><h3 className={"h4"}>Quickest reply: WhatsApp</h3><p className={"small"}>Send a product list or site photo. We'll quote from the nearest branch.</p></div>
+<div className={"row"} style={{gap: "8px"}}><Button variant="secondary" size="sm" href={"https://wa.me/919274337813"} target={"_blank"} rel={"noopener"}>WhatsApp +91 92743 37813</Button></div></div>
 </div>
 </div></section>
 <Footer />

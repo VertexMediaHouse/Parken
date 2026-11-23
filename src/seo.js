@@ -14,7 +14,7 @@ const M = {
   Manufacturing: ['PARKAN In-house Brand | Parkan Group', 'PARKAN wires, cable accessories, conduits and boxes, made through trusted contract manufacturing and backed by 23+ years of trade.'],
   Products: ['Our Products | Parkan Group', 'Browse PARKAN copper flexible wire, submersible wire, cable glands, terminals, ties, clips, flexible pipe and modular boxes.'],
   ProductDetail: ['PARKAN Copper Flexible Wire | Parkan Group', 'PARKAN copper flexible wire: specifications, certifications and dealer enquiries.'],
-  Contact: ['Contact Us | Parkan Group', 'Send an enquiry, request bulk pricing or book a meeting with Parkan Group. Call +91 98440 38260.'],
+  Contact: ['Contact Us | Parkan Group', 'Send an enquiry, request bulk pricing or book a meeting with Parkan Group. Call +91 92743 37813.'],
   Admin: ['Admin | Parkan Group', 'Content admin.'],
 }
 
@@ -38,7 +38,7 @@ export function headTags(name, path) {
   if (name === 'Main') tags.push(`<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Organization',
     name: 'Parkan Enterprises Limited', alternateName: 'Parkan Group', url: SITE_URL, logo: SITE_URL + '/media/logo.png',
-    email: 'parkanenterprisesltd@gmail.com', telephone: '+91 98440 38260', foundingDate: '2003',
+    email: 'parkanenterprisesltd@gmail.com', telephone: '+91 92743 37813', foundingDate: '2003',
     address: { '@type': 'PostalAddress', addressLocality: 'Hubballi', addressRegion: 'Karnataka', addressCountry: 'IN' },
   })}</script>`)
   return tags.join('\n    ')

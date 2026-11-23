@@ -10,6 +10,12 @@ export function startMotion() {
   // section tabs scroll sideways on phones: bring the current one into view
   const tab = document.querySelector('.subnav .on'), bar = tab?.parentElement
   if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollLeft += tab.getBoundingClientRect().left - bar.getBoundingClientRect().left - 16
+  // fade the right edge while more tabs are hidden off to the side
+  const tabs = document.querySelector('.subnav .wrap')
+  if (tabs) {
+    const edge = () => tabs.classList.toggle('more', tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 4)
+    tabs.addEventListener('scroll', edge, { passive: true }); addEventListener('resize', edge); edge(); document.fonts?.ready.then(edge)
+  }
 
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
