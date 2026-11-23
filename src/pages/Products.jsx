@@ -4,22 +4,13 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import ProductCard from '../ProductCard.jsx'
+import { categories, products } from '../products.js'
 
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { cat: 'all' }; }
   renderVals() {
-    const cats = [['all','All products'],['wire','Wires & Cables'],['acc','Cable Accessories'],['box','Conduits & Boxes']];
-    const all = [
-      { c: 'wire', cat: 'Wires & Cables', name: 'Copper Flexible Wire', spec: 'Multi-core copper · [Sizes] · [Coil length]', img: '/img/3ad7a62206a97cbc6d86d076701f53a0.png' },
-      { c: 'wire', cat: 'Wires & Cables', name: 'Aluminium Wire', spec: 'Stranded aluminium conductor · [Sizes]', img: '/img/cd3d12ff449434da80b3e66cb98c1d17.png' },
-      { c: 'wire', cat: 'Wires & Cables', name: 'Submersible Wire', spec: 'Flat 3-core for pumps · [Sizes]', img: '/img/46a59c725f2f845396470ddbf4aaf5dc.png' },
-      { c: 'acc', cat: 'Cable Accessories', name: 'Nylon Cable Ties', spec: '[Lengths] · [Colours]', img: '/img/af0666c1aaeded40fc5dd9228ea414a8.png' },
-      { c: 'acc', cat: 'Cable Accessories', name: 'PVC Cable Clips', spec: 'With steel nails · [Sizes]', img: '/img/f584469b41f17caf4493bd5cd89c506a.png' },
-      { c: 'acc', cat: 'Cable Accessories', name: 'Aluminium & Copper Terminals', spec: '[Types] · [Sizes]', img: '/img/f2bf647773d8645c2a1b48c0ebf12db0.png' },
-      { c: 'acc', cat: 'Cable Accessories', name: 'Single & Double Compression Glands', spec: 'Brass · [Sizes]', img: '/img/22ae9b4fdc00b2a1ac38d99de2e97f2f.png' },
-      { c: 'box', cat: 'Conduits & Boxes', name: 'Flexible Pipe', spec: 'Corrugated · [Diameters] · [Coil length]', img: '/img/7a8cf99aa34623d083b1537073ddf866.png' },
-      { c: 'box', cat: 'Conduits & Boxes', name: 'Surface & Modular Boxes', spec: '[Module sizes] · [Finish]', img: '/img/db0d79cb2106768fc379d2fd816f5e66.png' }
-    ];
+    const cats = categories, all = products;
     const items = this.state.cat === 'all' ? all : all.filter(p => p.c === this.state.cat);
     const active = cats.find(c => c[0] === this.state.cat);
     return {
@@ -35,7 +26,7 @@ export default function Products() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/warehouse-racks.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/home-hero-3.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Our Products</p>
 <p className={"eyebrow"}>PARKAN products</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Our Own Range, <em>Built on 23 Years</em></h1>
@@ -60,13 +51,7 @@ export default function Products() {
 <div className={"row"} style={{justifyContent: "space-between", gap: "16px"}}><p className={"small"}>Showing <strong>{v.count}</strong> products in <strong>{v.activeLabel}</strong></p>
 <div className={"row"} style={{gap: "10px"}}><label htmlFor={"sort"} className={"small"} style={{fontWeight: "600"}}>Sort by</label><select id={"sort"} className={"input"} style={{width: "200px"}}><option>Name A–Z</option><option>Newest first</option><option>Category</option></select></div></div>
 <div className={"g3"}>
-{v.items.map((p, i) => (<Fragment key={i}>
-<article className={"card card-flat"}><img src={p.img} alt={p.name} style={{width: "100%", height: "200px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} />
-<div className={"body"}><div className={"row"} style={{gap: "6px"}}><span className={"tag"}>{p.cat}</span><span className={"tag tag-red"}>PARKAN</span></div>
-<h3 className={"h4"}>{p.name}</h3>
-<p className={"small"}>{p.spec}</p>
-<div className={"row"} style={{gap: "8px", marginTop: "6px"}}><Button variant="secondary" size="sm" href={"/product"}>View Details</Button><Button variant="secondary" size="sm" href={"/contact"}>Enquire Now</Button></div></div></article>
-</Fragment>))}
+{v.items.map(p => <ProductCard key={p.slug} p={p} />)}
 </div>
 <div className={"card"} style={{flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "16px", background: "#EEF3FA", borderColor: "#EEF3FA"}}><div className={"stack"} style={{gap: "4px"}}><h3 className={"h4"}>More PARKAN products being added</h3><p className={"small"}>Need Legrand, Havells, Polycab or Schneider? We supply those too.</p></div><Button variant="secondary" size="sm" href={"/trading"}>Brands we distribute</Button></div>
 </div>

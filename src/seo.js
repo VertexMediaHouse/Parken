@@ -1,4 +1,6 @@
 // Per-route <title>/description, written into each prerendered page at build time.
+import { productAt } from './products.js'
+
 export const SITE_URL = 'https://www.parkangroup.com' // TODO: confirm the live domain
 
 const M = {
@@ -7,19 +9,18 @@ const M = {
   About: ['About Us | Parkan Group', 'From a single store in Hubballi in 2003 to one of the region\'s largest electrical distributors, a government projects partner and the PARKAN brand.'],
   Leadership: ['Our Leadership Team | Parkan Group', 'The directors, advisors and teams behind Parkan Group across Karnataka, Goa and Gujarat.'],
   Branches: ['Our Branches | Parkan Group', '13 Parkan branches across Karnataka, Goa and Gujarat, with the head office in Hubballi.'],
-  WhyUs: ['Why Work With Us | Parkan Group', 'Why customers, dealers and government bodies work with Parkan: 23+ years of supply, 50+ government projects and 13 branches. Careers at Parkan.'],
   Verticals: ['Verticals | Parkan Group', 'Trading & Distribution, Infrastructure & Projects and the PARKAN in-house brand: three businesses that strengthen each other.'],
   Trading: ['Trading & Distribution | Parkan Group', 'Wholesale electrical products, lighting, appliances and specialised cables from India\'s leading brands, supplied through 13 branches to 1,700+ dealers.'],
   Infrastructure: ['Infrastructure & Projects | Parkan Group', 'Electrical infrastructure for government hospitals, public lighting and smart-city works: 50+ projects and 4,100+ streetlights installed.'],
   Manufacturing: ['PARKAN In-house Brand | Parkan Group', 'PARKAN wires, cable accessories, conduits and boxes, made through trusted contract manufacturing and backed by 23+ years of trade.'],
   Products: ['Our Products | Parkan Group', 'Browse PARKAN copper flexible wire, submersible wire, cable glands, terminals, ties, clips, flexible pipe and modular boxes.'],
-  ProductDetail: ['PARKAN Copper Flexible Wire | Parkan Group', 'PARKAN copper flexible wire: specifications, certifications and dealer enquiries.'],
   Contact: ['Contact Us | Parkan Group', 'Send an enquiry, request bulk pricing or book a meeting with Parkan Group. Call +91 92743 37813.'],
   Admin: ['Admin | Parkan Group', 'Content admin.'],
 }
 
 export function headTags(name, path) {
-  const [title, description] = M[name]
+  const p = name === 'ProductDetail' && productAt(path)
+  const [title, description] = p ? [`PARKAN ${p.name} | Parkan Group`, p.summary] : M[name]
   const url = SITE_URL + path
   const e = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
   const tags = [

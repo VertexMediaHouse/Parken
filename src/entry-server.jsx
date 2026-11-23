@@ -2,7 +2,11 @@ import { renderToString } from 'react-dom/server'
 import { IconContext } from '@phosphor-icons/react'
 import { headTags } from './seo.js'
 export { SITE_URL } from './seo.js'
-export { default as routes } from './routes.json'
+import routes from './routes.json'
+import { productPath, products } from './products.js'
+
+// every prerendered page as [page name, path]: the routes plus one page per product
+export const pageList = [...Object.entries(routes), ...products.map(p => ['ProductDetail', productPath(p)])]
 
 const pages = import.meta.glob('./pages/*.jsx', { eager: true })
 

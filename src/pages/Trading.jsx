@@ -44,7 +44,7 @@ export default function Trading() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/warehouse-aisle.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/vertical-trading.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / Trading &amp; Distribution</p>
 <p className={"eyebrow"}>Vertical 01 · Since 2003</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Trading &amp; <em>Distribution</em></h1>
@@ -60,7 +60,7 @@ export default function Trading() {
 <div className={"stack"} style={{gap: "4px"}}><span className={"stat"} style={{fontSize: "34px"}}>16+</span><span className={"small muted"}>Leading brands</span></div>
 <div className={"stack"} style={{gap: "4px"}}><span className={"stat"} style={{fontSize: "34px"}}>1,700+</span><span className={"small muted"}>Dealer network</span></div>
 </div></div>
-<img src={"/media/warehouse-racks.webp"} alt={"Warehouse racks stocked with electrical goods"} loading={"lazy"} style={{width: "100%", height: "400px", borderRadius: "8px", objectFit: "cover", display: "block"}} />
+<img src={"/media/about-hero.webp"} alt={"Distribution warehouse stocked with wire reels and switchgear"} loading={"lazy"} style={{width: "100%", height: "400px", borderRadius: "8px", objectFit: "cover", display: "block"}} />
 </div></section>
 
 <section className={"sec alt"}><div className={"wrap"}><div className={"reach"}>
@@ -91,7 +91,7 @@ export default function Trading() {
 <div className={"sechead"}><div><p className={"eyebrow"}>Reach &amp; logistics</p><h2 className={"h2"}>Close by, always stocked</h2></div></div>
 <div className={"g2"} style={{gap: "24px"}}>
 <div className={"card tcard"}><div className={"timg tmap"}><img src={"/media/branch-map-720.webp"} alt={"Map of Parkan branches across Karnataka, Goa and Gujarat"} loading={"lazy"} /></div><div className={"tbody"}><div className={"ico"}><MapPin /></div><h2 className={"h3"}>Branch network</h2><p className={"small"}>13 branches across Karnataka, Goa and Gujarat, with stock close to you.</p><Button variant="link" href={"/branches"}>Find a branch →</Button></div></div>
-<div className={"card tcard"}><div className={"timg"}><img src={"/media/site-engineers.webp"} alt={"Site engineers reviewing an electrical installation"} loading={"lazy"} /></div><div className={"tbody"}><div className={"ico ico-red"}><Truck /></div><h2 className={"h3"}>Supply for projects</h2><p className={"small"}>Bulk project supply, shipped pan-India from our Odhav warehouse.</p><Button variant="link" href={"/infrastructure"}>See our projects →</Button></div></div>
+<div className={"card tcard"}><div className={"timg"}><img src={"/media/about-people.webp"} alt={"Parkan team reviewing plans in the warehouse"} loading={"lazy"} /></div><div className={"tbody"}><div className={"ico ico-red"}><Truck /></div><h2 className={"h3"}>Supply for projects</h2><p className={"small"}>Bulk project supply, shipped pan-India from our Odhav warehouse.</p><Button variant="link" href={"/infrastructure"}>See our projects →</Button></div></div>
 </div>
 </div></section>
 

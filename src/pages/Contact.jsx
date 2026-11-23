@@ -56,7 +56,7 @@ export default function Contact() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/site-electrical-work.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/contact-hero.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Contact Us</p>
 <p className={"eyebrow"}>Contact us</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Let's Work <em>Together</em></h1>

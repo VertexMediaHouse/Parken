@@ -26,7 +26,7 @@ export default function Footer() {
 </div>
 <div className="fcol"><h4>Company</h4><a href="/about">About Us</a><a href="/verticals">Our Business Verticals</a><a href="/products">Our Products</a><a href="/infrastructure">Our Projects</a><a href="/branches">Our Branches</a></div>
 <div className="fcol"><h4>Products</h4><a href="/products">Wires &amp; Cables</a><a href="/products">Cable Accessories</a><a href="/products">Conduits &amp; Boxes</a><a href="/in-house-brand">In-house Brand</a></div>
-<div className="fcol"><h4>Support</h4><a href="/contact">Send an Enquiry</a><a href="/contact">Contact Us</a><a href="/why-us">Careers</a><a href="/leadership">Leadership Team</a></div>
+<div className="fcol"><h4>Support</h4><a href="/contact">Send an Enquiry</a><a href="/contact">Contact Us</a><a href="/leadership">Leadership Team</a></div>
 <div className="aibox">
 <h4><Spark /> Find Us On AI Apps</h4>
 <p className="small">Get to know Parkan Group, our products, services and projects on your favourite AI platforms.</p>

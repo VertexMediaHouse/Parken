@@ -16,13 +16,13 @@ export default function Company() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/distribution-floor.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-hero.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Company</p>
 <p className={"eyebrow"}>Company</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>23 years of <em>powering projects</em></h1>
 <p className={"lead"}>Part of the Pooja Group. Based in Hubballi, with 13 branches across Karnataka, Goa and Gujarat.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
+<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
 
 <section style={{padding: "28px 0 0"}}><div className={"wrap"}>
 <div className={"g4"} style={{background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", padding: "28px", gap: "0"}}>
@@ -34,10 +34,9 @@ export default function Company() {
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"g2"} style={{gap: "24px"}}>
-<a href={"/about"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/media/site-electrical-work.webp"} alt={"Electrical crew at work on a project site"} loading={"lazy"} style={{width: "200px", height: "160px", flex: "none", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.1</span><h2 className={"h3"}>About Us</h2><p className={"small"}>Our story since 2003, and what we stand for.</p><Button as="span" variant="link">Read more →</Button></div></a>
-<a href={"/leadership"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/media/team-meeting.webp"} alt={"Team meeting in the office"} loading={"lazy"} style={{width: "200px", height: "160px", flex: "none", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.2</span><h2 className={"h3"}>Our Leadership Team</h2><p className={"small"}>The people behind every branch and project.</p><Button as="span" variant="link">Meet the team →</Button></div></a>
+<a href={"/about"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/media/about-company-2-720.webp"} alt={"Office building at dusk"} loading={"lazy"} style={{width: "200px", height: "160px", flex: "none", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.1</span><h2 className={"h3"}>About Us</h2><p className={"small"}>Our story since 2003, and what we stand for.</p><Button as="span" variant="link">Read more →</Button></div></a>
+<a href={"/leadership"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/media/about-people.webp"} alt={"Parkan team reviewing plans in the warehouse"} loading={"lazy"} style={{width: "200px", height: "160px", flex: "none", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.2</span><h2 className={"h3"}>Our Leadership Team</h2><p className={"small"}>The people behind every branch and project.</p><Button as="span" variant="link">Meet the team →</Button></div></a>
 <a href={"/branches"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/img/0ff6f04e8e1bc90dfbcd5e8087794c6a.jpg"} alt={"Map of Parkan Group branches in western India"} style={{width: "200px", height: "160px", flex: "none", objectFit: "cover", borderRadius: "8px", background: "#0E2A52"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.3</span><h2 className={"h3"}>Our Branches</h2><p className={"small"}>13 branches across Karnataka, Goa and Gujarat, with our head office in Hubballi.</p><Button as="span" variant="link">Find a branch →</Button></div></a>
-<a href={"/why-us"} className={"card"} style={{textDecoration: "none", flexDirection: "row", gap: "24px", alignItems: "center"}}><img src={"/media/site-engineers.webp"} alt={"Engineers reviewing a project site"} loading={"lazy"} style={{width: "200px", height: "160px", flex: "none", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"stack"} style={{gap: "10px"}}><span className={"tag"}>2.4</span><h2 className={"h3"}>Why Work With Us</h2><p className={"small"}>Why people trust us, partnerships and careers.</p><Button as="span" variant="link">See why →</Button></div></a>
 </div></div></section>
 
 <section className={"sec alt"}><div className={"wrap"}>

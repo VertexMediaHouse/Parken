@@ -32,13 +32,13 @@ export default function About() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/team-meeting.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-hero.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / About Us</p>
 <p className={"eyebrow"}>About us</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>One store to <em>13 branches</em></h1>
 <p className={"lead"}>23+ years of reliable electrical supply and projects.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
+<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap g2 duo"} style={{gap: "64px"}}>
 <div className={"stack"} style={{gap: "20px"}}>
@@ -49,7 +49,7 @@ export default function About() {
 <p>We have also delivered 50+ government projects: hospitals, public lighting and smart-city works.</p>
 <p>Now we make our own products under the PARKAN brand.</p>
 </div>
-<div className={"stack"} style={{gap: "16px"}}><img src={"/media/site-electrical-work.webp"} alt={"Electrical crew laying cabling on a project site"} loading={"lazy"} style={{width: "100%", height: "340px", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"g2"} style={{gap: "16px"}}><img src={"/img/d69f347a7af9b6768177cdac9874b11b.jpg"} alt={"Government Hospital Shirhatti, electrified by Parkan"} style={{width: "100%", height: "160px", objectFit: "cover", borderRadius: "8px", display: "block"}} /><img src={"/img/3ad7a62206a97cbc6d86d076701f53a0.png"} alt={"PARKAN copper flexible wire"} style={{width: "100%", height: "160px", objectFit: "contain", background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", display: "block"}} /></div></div>
+<div className={"stack"} style={{gap: "16px"}}><img src={"/media/about-company-2.webp"} alt={"Office building at dusk"} loading={"lazy"} style={{width: "100%", height: "340px", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"g2"} style={{gap: "16px"}}><img src={"/media/about-company-1.webp"} alt={"Electrician installing ceiling cable trays"} loading={"lazy"} style={{width: "100%", height: "160px", objectFit: "cover", objectPosition: "70% center", borderRadius: "8px", display: "block"}} /><img src={"/media/about-company-3-720.webp"} alt={"Multi-core copper cables"} loading={"lazy"} style={{width: "100%", height: "160px", objectFit: "cover", borderRadius: "8px", display: "block"}} /></div></div>
 </div></section>
 
 <section style={{padding: "0 0 44px"}}><div className={"wrap"}>
@@ -82,7 +82,7 @@ export default function About() {
 </ul>
 </div></section>
 
-<section className={"sec"}><div className={"wrap"}><div className={"cta"}>
+<section className={"sec"}><div className={"wrap"}><div className={"cta"} style={{"--cta": "url(/media/about-people.webp)"}}>
 <div className={"stack"} style={{gap: "10px", maxWidth: "640px"}}><h2 className={"h2"}>Our people</h2><p className={"lead"}>Decades of industry experience at the top.</p></div>
 <div className={"row"} style={{gap: "12px"}}><Button variant="accent" href={"/leadership"}>Our Leadership Team</Button></div>
 </div></div></section>

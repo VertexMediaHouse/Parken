@@ -15,13 +15,13 @@ export default function Leadership() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/site-engineers.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-people.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Our Leadership Team</p>
 <p className={"eyebrow"}>Our leadership team</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Experience <em>meets ambition</em></h1>
 <p className={"lead"}>Decades of industry experience and a clear plan for growth.</p>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button><Button variant="ghost" size="sm" href={"/why-us"}>Why Work With Us</Button></div></nav>
+<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Board of directors</p><h2 className={"h2"}>Our leaders</h2></div></div>
@@ -45,7 +45,7 @@ export default function Leadership() {
 <section className={"sec alt"}><div className={"wrap g2"} style={{gap: "64px", alignItems: "center"}}>
 <div className={"ph"} style={{height: "360px"}}>IMAGE · Team event / Diwali celebration</div>
 <div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Join our team</p><h2 className={"h2"}>Grow with us</h2><p>We hire sales, project and operations talent across 13 branches.</p>
-<div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/why-us"}>See Open Roles</Button><Button variant="secondary" href={"/contact"}>Send Your CV</Button></div></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="secondary" href={"/contact"}>Send Your CV</Button></div></div>
 </div></section>
 <Footer />
 </div>

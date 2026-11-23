@@ -6,12 +6,12 @@ import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
 
 const SERVICES = [
-  ['Inside the building', '/media/electrician-testing.webp', 'Electrician testing a distribution board', [
+  ['Inside the building', '/media/projects-work-1.webp', 'Electrician wiring a distribution board', [
     ['Internal wiring', 'Wiring, switches and sockets, and fan installation.', <Plug />],
     ['COB & LED light fittings', 'Indoor lighting for hospitals, offices and institutions.', <Lightbulb />],
     ['Distribution boards & MCBs', 'Protection and distribution for every floor.', <SquaresFour />],
   ]],
-  ['Power & public spaces', '/media/high-mast.webp', 'High-mast lighting installed by Parkan', [
+  ['Power & public spaces', '/media/projects-work-2.webp', 'LED street lighting along a city road at dusk', [
     ['HT/LT cabling & panels', 'Power cabling and panels from supply point to load.', <Lightning />],
     ['Street & high-mast lighting', 'Efficient fixtures, poles and cabling for roads.', <Lamp />],
     ['Smart-city & public spaces', 'Lighting for markets, lakefronts and walkways.', <Buildings />],
@@ -29,7 +29,7 @@ export default function Infrastructure() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/jayadeva-hospital.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/projects-hero.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / Infrastructure &amp; Projects</p>
 <p className={"eyebrow"}>Vertical 02 · Since 2020</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Infrastructure &amp; <em>Projects</em></h1>

@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { ArrowRight, CaretDown, List, PhoneCall, X } from "@phosphor-icons/react"
 import Button, { IconButton } from './Button.jsx'
 
-const SECTIONS = { "/about": ["/about", "/company", "/leadership", "/branches", "/why-us"], "/verticals": ["/verticals", "/trading", "/in-house-brand"], "/products": ["/products", "/product"], "/infrastructure": ["/infrastructure"] }
+const SECTIONS = { "/company": ["/company", "/about", "/leadership", "/branches"], "/verticals": ["/verticals", "/trading", "/in-house-brand"], "/products": ["/products"], "/infrastructure": ["/infrastructure"] }
 // globalThis.__path is set by the prerender (no location on the server)
-const on = href => (SECTIONS[href] ?? [href]).includes((globalThis.__path ?? location.pathname).replace(/\/+$/, "") || "/") ? "on" : undefined
+// /products/<slug> pages count as /products
+const on = href => (SECTIONS[href] ?? [href]).includes((globalThis.__path ?? location.pathname).replace(/\/+$/, "").replace(/^\/products\/.+/, "/products") || "/") ? "on" : undefined
 const Caret = () => <CaretDown size={14} weight="bold" />
 export const Arrow = () => <ArrowRight size={18} weight="bold" />
 const Lines = ({ open }) => open ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />
@@ -18,7 +19,7 @@ export default function Header() {
 <a href="/" aria-label="Parkan Group home"><img className="logo" src="/img/69c175a88a5363f02583985878053bcf.png" alt="Parkan Group — Built on Trust" /></a>
 <nav id="menu" className="menu" aria-label="Main">
 <Nav href="/">Home</Nav>
-<Nav href="/about">About Us</Nav>
+<div className="dd"><Nav href="/company" iconRight={<Caret />}>Company</Nav><div className="ddm"><a href="/about">About Us</a><a href="/leadership">Our Leadership Team</a><a href="/branches">Our Branches</a></div></div>
 <div className="dd"><Nav href="/verticals" iconRight={<Caret />}>Our Verticals</Nav><div className="ddm"><a href="/trading">Trading &amp; Distribution</a><a href="/infrastructure">Infrastructure &amp; Projects</a><a href="/in-house-brand">In-house Brand</a></div></div>
 <div className="dd"><Nav href="/products" iconRight={<Caret />}>Products</Nav><div className="ddm"><a href="/products">All Products</a><a href="/in-house-brand">PARKAN In-house Brand</a><a href="/trading">Brands We Distribute</a></div></div>
 <Nav href="/infrastructure">Projects</Nav>

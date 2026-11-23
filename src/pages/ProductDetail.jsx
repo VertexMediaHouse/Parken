@@ -1,59 +1,79 @@
-import { FilePdf, Truck, WhatsappLogo } from '@phosphor-icons/react'
-import { Fragment } from 'react'
-import { DCLogic, useDC } from '../dc.js'
+import { Certificate, FilePdf, FileText, ShieldCheck, Truck, WhatsappLogo } from '@phosphor-icons/react'
+import { useState } from 'react'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import ProductCard from '../ProductCard.jsx'
+import { productAt, products } from '../products.js'
 
-class Component extends DCLogic {
-renderVals() {
-return {};
-}
-}
+// extra gallery shots after each product's own photo
+const GALLERY = [
+  ['/media/about-hero.webp', 'Distribution warehouse stocked and ready to ship'],
+  ['/media/vertical-trading.webp', 'Warehouse racks stocked with wire reels'],
+  ['/media/projects-work-1.webp', 'Electrician wiring a distribution board'],
+]
+const TABS = [['desc', 'Description'], ['specs', 'Specifications'], ['certs', 'Certifications'], ['files', 'Downloads']]
+const QC = ['Stage-wise quality checks', 'Checked at every stage of production by our selected manufacturing partners.', <ShieldCheck />]
+const REPORTS = ['Test reports on request', 'Batch test reports for dealer, project and tender submissions.', <FileText />]
+const FILES = [['Product datasheet', 'PDF · specifications, sizes and codes', 'datasheet'], ['PARKAN catalogue', 'PDF · the full PARKAN range', 'PARKAN catalogue'], ['Test report', 'PDF · latest batch', 'latest test report']]
+const th = {width: "40%"}
 
 export default function ProductDetail() {
-  const v = useDC(Component)
+  // globalThis.__path is set by the prerender (no location on the server)
+  const p = productAt(globalThis.__path ?? location.pathname) ?? products[0]
+  const [tab, setTab] = useState('desc')
+  const [shot, setShot] = useState(0)
+  const shots = [[p.img, p.alt], ...GALLERY]
+  const ask = what => 'https://wa.me/919274337813?text=' + encodeURIComponent(`Hi Parkan, please send the ${what} for PARKAN ${p.name} (${p.code}).`)
+  const related = [...products.filter(x => x.c === p.c && x !== p), ...products.filter(x => x.c !== p.c)].slice(0, 4)
+  const certs = [...p.certs.map(([t, d]) => [t, d, <Certificate />]), QC, REPORTS]
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<div style={{background: "#F4F6F9", borderBottom: "1px solid #DDE2EA"}}><div className={"wrap"} style={{paddingTop: "16px", paddingBottom: "16px"}}><p className={"small"}><a href={"/"}>Home</a> / <a href={"/products"}>Our Products</a> / <a href={"/products"}>Wires &amp; Cables</a> / Copper Flexible Wire</p></div></div>
+<div style={{background: "#F4F6F9", borderBottom: "1px solid #DDE2EA"}}><div className={"wrap"} style={{paddingTop: "16px", paddingBottom: "16px"}}><p className={"small"}><a href={"/"}>Home</a> / <a href={"/products"}>Our Products</a> / <a href={"/products"}>{p.cat}</a> / {p.name}</p></div></div>
 
 <section className={"sec"} style={{paddingTop: "24px"}}><div className={"wrap g2 duo"} style={{gap: "56px"}}>
 <div className={"stack"} style={{gap: "12px"}}>
-<img src={"/img/3ad7a62206a97cbc6d86d076701f53a0.png"} alt={"PARKAN multi-core copper flexible cable with coloured insulation"} style={{width: "100%", height: "520px", objectFit: "contain", background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", display: "block"}} />
-<div className={"g4"} style={{gap: "12px"}}><img src={"/img/3ad7a62206a97cbc6d86d076701f53a0.png"} alt={"Copper flexible wire, main view"} style={{width: "100%", height: "104px", objectFit: "contain", background: "#FFFFFF", border: "2px solid #184A8C", borderRadius: "8px", display: "block"}} /><div className={"ph"} style={{height: "104px"}}>COIL PHOTO</div><div className={"ph"} style={{height: "104px"}}>PACKAGING</div><div className={"ph"} style={{height: "104px"}}>VIDEO</div></div>
+<img src={shots[shot][0]} alt={shots[shot][1]} style={{width: "100%", height: "520px", objectFit: shot ? "cover" : "contain", background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", display: "block"}} />
+<div className={"pgal"}>{shots.map(([src, alt], i) => <button type="button" key={src} className={i === shot ? "on" : undefined} aria-pressed={i === shot} aria-label={`Show image ${i + 1}: ${alt}`} onClick={() => setShot(i)}><img src={src} alt="" /></button>)}</div>
 </div>
 <div className={"stack"} style={{gap: "20px"}}>
-<div className={"row"} style={{gap: "8px"}}><span className={"tag"}>Wires &amp; Cables</span><span className={"tag"}>PARKAN in-house range</span><span className={"tag tag-red"}>[ISI certified]</span></div>
-<h1 className={"h2"}>PARKAN Copper Flexible Wire</h1>
-<p className={"small muted"}>Product code: [PK-CFW-000]</p>
-<p>Multi-core copper flexible wire with coloured insulation for house wiring, panels and appliance connections. [Add conductor grade, insulation type and applicable standard.]</p>
+<div className={"row"} style={{gap: "8px"}}><span className={"tag"}>{p.cat}</span><span className={"tag"}>PARKAN in-house range</span>{p.certs[0] && <span className={"tag tag-red"}>{p.certs[0][0]}</span>}</div>
+<h1 className={"h2"}>PARKAN {p.name}</h1>
+<p className={"small muted"}>Product code: {p.code}</p>
+<p>{p.summary}</p>
 <table className={"table"} style={{border: "1px solid #DDE2EA", borderRadius: "8px", overflow: "hidden"}}><tbody>
-<tr><th style={{width: "40%"}}>Conductor</th><td>Copper, multi-strand</td></tr>
-<tr><th>Cores</th><td>[1 / 2 / 3 / 4 core]</td></tr>
-<tr><th>Sizes</th><td>[0.75 – X sq mm]</td></tr>
-<tr><th>Insulation</th><td>[PVC / FR / FR-LSH]</td></tr>
-<tr><th>Voltage grade</th><td>[X kV]</td></tr>
-<tr><th>Coil length</th><td>[X m]</td></tr>
+{p.specs.slice(0, 5).map(([k, val], i) => <tr key={k}><th style={i ? undefined : th}>{k}</th><td>{val}</td></tr>)}
 </tbody></table>
-<div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/contact"}>Enquire Now</Button><Button variant="secondary" icon={<WhatsappLogo size={18} />} href={"#"}>WhatsApp</Button><Button variant="secondary" icon={<FilePdf size={18} />} href={"#"}>Datasheet PDF</Button></div>
+<div className={"row"} style={{gap: "12px"}}><Button variant="primary" href={"/contact"}>Enquire Now</Button><Button variant="secondary" icon={<WhatsappLogo size={18} />} href={ask("price and availability")} target={"_blank"} rel={"noopener"}>WhatsApp</Button><Button variant="secondary" icon={<FilePdf size={18} />} href={"#details"} onClick={() => setTab("files")}>Datasheet PDF</Button></div>
 <div className={"card"} style={{flexDirection: "row", gap: "16px", alignItems: "center", background: "#EEF3FA", borderColor: "#EEF3FA"}}><div className={"ico"} style={{background: "#FFFFFF"}}><Truck /></div><p className={"small"} style={{color: "#0E2A52"}}>At 13 branches and 1,700+ dealers · Bulk pricing on request</p></div>
 </div>
 </div></section>
 
-<section className={"sec alt"}><div className={"wrap"}>
-<div className={"row"} style={{gap: "8px", marginBottom: "24px"}}><Button variant="secondary" size="sm" className="on" aria-pressed={true}>Description</Button><Button variant="secondary" size="sm" aria-pressed={false}>Specifications</Button><Button variant="secondary" size="sm" aria-pressed={false}>Certifications</Button><Button variant="secondary" size="sm" aria-pressed={false}>Downloads</Button></div>
-<div className={"card"} style={{padding: "36px"}}><p>[Detailed product description, applications (homes, offices, panels, appliances) and installation notes.]</p><ul className={"list"} style={{marginTop: "8px"}}><li className={"check"}>[Key feature 1]</li><li className={"check"}>[Key feature 2]</li><li className={"check"}>[Key feature 3]</li></ul></div>
+<section className={"sec alt"} id={"details"}><div className={"wrap"}>
+<div className={"row"} role={"group"} aria-label={"Product information"} style={{gap: "8px", marginBottom: "24px"}}>{TABS.map(([id, label]) => <Button key={id} variant="secondary" size="sm" className={tab === id ? "on" : undefined} aria-pressed={tab === id} aria-controls={"tab-" + id} onClick={() => setTab(id)}>{label}</Button>)}</div>
+<div className={"card"} style={{padding: "36px"}}>
+<div id={"tab-desc"} hidden={tab !== "desc"}><div className={"g2"} style={{gap: "40px"}}>
+<div className={"stack"} style={{gap: "14px"}}><h2 className={"h4"}>About this product</h2>{p.desc.map(t => <p key={t}>{t}</p>)}</div>
+<div className={"stack"} style={{gap: "14px"}}><h2 className={"h4"}>Key features</h2><ul className={"list"}>{p.features.map(f => <li key={f} className={"check"}>{f}</li>)}</ul></div>
+</div></div>
+<div id={"tab-specs"} hidden={tab !== "specs"}><table className={"table"} style={{border: "1px solid #DDE2EA"}}><tbody>
+{p.specs.map(([k, val], i) => <tr key={k}><th style={i ? undefined : th}>{k}</th><td>{val}</td></tr>)}
+<tr><th>Product code</th><td>{p.code}</td></tr>
+</tbody></table></div>
+<div id={"tab-certs"} hidden={tab !== "certs"}><div className={"g3"}>
+{certs.map(([t, d, icon]) => <div key={t} className={"stack"} style={{gap: "10px"}}><span className={"ico"}>{icon}</span><h3 className={"h4"}>{t}</h3><p className={"small"}>{d}</p></div>)}
+</div></div>
+<div id={"tab-files"} hidden={tab !== "files"}><ul className={"dl"}>
+{FILES.map(([t, d, what]) => <li key={t}><span className={"ico"}><FilePdf /></span><div className={"stack"} style={{gap: "2px"}}><strong>{t}</strong><span className={"small muted"}>{d}</span></div><Button variant="secondary" size="sm" icon={<WhatsappLogo size={16} />} href={ask(what)} target={"_blank"} rel={"noopener"} aria-label={`Request ${t} on WhatsApp`}>Request</Button></li>)}
+</ul></div>
+</div>
 </div></section>
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>You may also need</p><h2 className={"h2"}>Related products</h2></div><Button variant="link" href={"/products"}>All PARKAN products →</Button></div>
-<div className={"g4"}>
-<article className={"card card-flat"}><img src={"/img/cd3d12ff449434da80b3e66cb98c1d17.png"} alt={"Stranded aluminium wire"} style={{width: "100%", height: "180px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"}><h3 className={"h4"}>Aluminium Wire</h3><p className={"small"}>Stranded · [Sizes]</p><Button variant="link" size="sm" href={"/product"}>View details →</Button></div></article>
-<article className={"card card-flat"}><img src={"/img/46a59c725f2f845396470ddbf4aaf5dc.png"} alt={"Flat submersible wire"} style={{width: "100%", height: "180px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"}><h3 className={"h4"}>Submersible Wire</h3><p className={"small"}>Flat 3-core · [Sizes]</p><Button variant="link" size="sm" href={"/product"}>View details →</Button></div></article>
-<article className={"card card-flat"}><img src={"/img/7a8cf99aa34623d083b1537073ddf866.png"} alt={"Corrugated flexible pipe"} style={{width: "100%", height: "180px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"}><h3 className={"h4"}>Flexible Pipe</h3><p className={"small"}>Corrugated · [Diameters]</p><Button variant="link" size="sm" href={"/product"}>View details →</Button></div></article>
-<article className={"card card-flat"}><img src={"/img/db0d79cb2106768fc379d2fd816f5e66.png"} alt={"Surface and modular boxes"} style={{width: "100%", height: "180px", objectFit: "contain", background: "#FFFFFF", borderBottom: "1px solid #DDE2EA", display: "block"}} /><div className={"body"}><h3 className={"h4"}>Surface &amp; Modular Boxes</h3><p className={"small"}>[Module sizes] · [Finish]</p><Button variant="link" size="sm" href={"/product"}>View details →</Button></div></article>
-</div></div></section>
+<div className={"g4"}>{related.map(r => <ProductCard key={r.slug} p={r} />)}</div>
+</div></section>
 <Footer />
 </div>
   )

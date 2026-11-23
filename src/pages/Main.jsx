@@ -8,6 +8,7 @@ import { brands } from '../LogoWall.jsx'
 import { branches, mapEmbed as embed, directions } from '../branches.js'
 
 const HOURS = 'Mon – Sat, 9:30 am – 7:00 pm'
+const Ico = ({ d, children }) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{d ? <path d={d}></path> : children}</svg>
 
 const projects = {
   progress: [
@@ -43,7 +44,7 @@ class Component extends DCLogic {
 }
 
 
-const SLIDES = ['/media/distribution-floor.webp', '/media/site-electrical-work.webp', '/media/jayadeva-hospital.webp']
+const SLIDES = ['/media/home-hero-1.webp', '/media/home-hero-2.webp', '/media/home-hero-3.webp']
 // background slider: slides travel left to right; state = [current, previous]
 function HeroSlides() {
   const [[cur, prev], set] = useState([0, -1])
@@ -93,24 +94,22 @@ export default function Main() {
 </section>
 
 <section className="sec"><div className="wrap">
-<div className="sechead">
-<div><p className="kicker">About us</p><h2 className="h2">Powering a<br /><em>Smarter Future.</em></h2></div>
-</div>
-<div className="abt duo">
-<img className="abt-img" src="/media/team-meeting.webp" alt="The Parkan team in a meeting at the office" loading="lazy" />
-<div className="stack" style={{gap: "24px"}}>
-<p className="lead">23+ years of electrical supply and infrastructure across Karnataka, Goa and Gujarat.</p>
-<p className="kicker" style={{margin: "8px 0 0"}}>Three business verticals</p>
-<ul className="abt-list">
-<li><a href="/trading"><span className="vico"><Package /></span>Trading &amp; Distribution<Arrow /></a></li>
-<li><a href="/infrastructure"><span className="vico"><HardHat /></span>Infrastructure &amp; Projects<Arrow /></a></li>
-<li><a href="/in-house-brand"><span className="vico"><Cube /></span>In-house Brand<Arrow /></a></li>
-</ul>
-<div className="row" style={{gap: "16px"}}>
+<div className="g2 about">
+<img className="capsule" src="/media/home-about.webp" alt="Parkan team in a product presentation at the office" loading="lazy" />
+<div className="stack" style={{gap: "28px", justifyContent: "center"}}>
+<div><p className="kicker">About us</p><h2 className="h2">Powering Projects for a <em>Stronger, Smarter</em> Future.</h2></div>
+<p className="lead">Parkan Enterprises Limited is an unlisted public limited company with over 23 years of experience in electrical and infrastructure solutions, operating across Karnataka, Goa and Gujarat.</p>
+<div className="row" style={{gap: "32px"}}>
 <Button href="/about" iconRight={<Arrow />}>More About Us</Button>
 <Button variant="secondary" href="/contact" iconRight={<Arrow />}>Get in Touch</Button>
 </div>
 </div>
+</div>
+<div className="g4 stats">
+<div className="statcard"><Ico d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7M12 6.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 8.6l2-.3z" /><span className="stat">23+</span><span>Years of Experience</span></div>
+<div className="statcard"><Ico d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /><span className="stat">13</span><span>Branches in 3 States</span></div>
+<div className="statcard"><Ico d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 6.5M18 14a6 6 0 0 1 3.5 6" /><span className="stat">1,700+</span><span>Dealer Network</span></div>
+<div className="statcard"><Ico d="M3 21h18M4 10h16M12 3l8 5H4zM6 10v8M10 10v8M14 10v8M18 10v8" /><span className="stat">50+</span><span>Government Projects Done</span></div>
 </div>
 </div></section>
 
@@ -122,9 +121,9 @@ export default function Main() {
 <Button href="/verticals" iconRight={<Arrow />}>Explore Our Verticals</Button>
 </div>
 <div className="g3">
-<a className="vcard" href="/trading"><img src="/media/warehouse-racks.webp" alt="Warehouse racks stocked with electrical goods" loading="lazy" /><div className="vbody"><span className="vico float"><Package /></span><h3 className="h3">Trading &amp; Distribution</h3><p className="small">Electrical products from India's top brands.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
-<a className="vcard" href="/infrastructure"><img src="/img/d69f347a7af9b6768177cdac9874b11b.jpg" alt="Government Hospital Shirhatti lit up at night" loading="lazy" /><div className="vbody"><span className="vico float red"><HardHat /></span><h3 className="h3">Infrastructure &amp; Projects</h3><p className="small">Electrical infrastructure, from design to handover.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
-<a className="vcard" href="/in-house-brand"><img src="/media/electrician-testing.webp" alt="Electrician testing an installation with a meter" loading="lazy" /><div className="vbody"><span className="vico float"><Cube /></span><h3 className="h3">In-house Brand</h3><p className="small">Quality products under our own PARKAN brand.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/trading"><img src="/media/vertical-trading-720.webp" alt="Warehouse racks stocked with wire reels and electrical goods" loading="lazy" /><div className="vbody"><span className="vico float"><Package /></span><h3 className="h3">Trading &amp; Distribution</h3><p className="small">Electrical products from India's top brands.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/infrastructure"><img src="/media/vertical-infra-720.webp" alt="Hospital building with completed electrical works, lit at night" loading="lazy" /><div className="vbody"><span className="vico float red"><HardHat /></span><h3 className="h3">Infrastructure &amp; Projects</h3><p className="small">Electrical infrastructure, from design to handover.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/in-house-brand"><img src="/media/vertical-brand-720.webp" alt="Electrician wiring a distribution board" loading="lazy" /><div className="vbody"><span className="vico float"><Cube /></span><h3 className="h3">In-house Brand</h3><p className="small">Quality products under our own PARKAN brand.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
 </div>
 </div></section>
 
@@ -134,9 +133,9 @@ export default function Main() {
 <p>Electrical products for homes, businesses and industry.</p>
 </div>
 <div className="bento">
-<a className="bcard big" href="/products"><div className="btxt"><span className="bico"><Plug /></span><h3>Wires &amp; Cables</h3><p>Copper, aluminium and submersible wire.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/img/3ad7a62206a97cbc6d86d076701f53a0.png" alt="PARKAN multi-core copper flexible cable" loading="lazy" /></a>
-<a className="bcard warm" href="/products"><div className="btxt"><span className="bico"><Wrench /></span><h3>Cable Accessories</h3><p>Glands, terminals, ties and clips.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/img/22ae9b4fdc00b2a1ac38d99de2e97f2f.png" alt="Brass single and double compression cable glands" loading="lazy" /></a>
-<a className="bcard" href="/products"><div className="btxt"><span className="bico"><Factory /></span><h3>Conduits &amp; Boxes</h3><p>Flexible pipe, surface and modular boxes.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/img/db0d79cb2106768fc379d2fd816f5e66.png" alt="White surface and modular switch boxes" loading="lazy" /></a>
+<a className="bcard big" href="/products"><div className="btxt"><span className="bico"><Plug /></span><h3>Wires &amp; Cables</h3><p>Copper, aluminium and submersible wire.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/media/product-wires-720.webp" alt="PARKAN multi-core copper cable" loading="lazy" /></a>
+<a className="bcard warm" href="/products"><div className="btxt"><span className="bico"><Wrench /></span><h3>Cable Accessories</h3><p>Glands, terminals, ties and clips.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/media/product-accessories-720.webp" alt="Cable glands, lugs, ferrules, clips and ties" loading="lazy" /></a>
+<a className="bcard" href="/products"><div className="btxt"><span className="bico"><Factory /></span><h3>Conduits &amp; Boxes</h3><p>Flexible pipe, surface and modular boxes.</p><IconButton as="span" aria-hidden="true" icon={<Arrow />} /></div><img src="/media/product-conduits-720.webp" alt="PVC conduit pipes, junction boxes and modular boxes" loading="lazy" /></a>
 </div>
 </div></section>
 
@@ -187,7 +186,7 @@ export default function Main() {
 </div></section>
 
 <section className="sec-tight" style={{paddingBottom: "56px"}}><div className="wrap"><div className="cta2">
-<img src="/media/site-electrical-work.webp" alt="" loading="lazy" />
+<img src="/media/home-contact.webp" alt="" loading="lazy" />
 <div className="stack" style={{gap: "16px", maxWidth: "560px"}}>
 <p className="kicker light">Get in touch</p>
 <h2 className="h2">Have a Project in Mind?</h2>
