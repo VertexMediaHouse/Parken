@@ -19,7 +19,7 @@ export default function Header() {
     document.documentElement.classList.toggle('menu-open', open)
     dispatchEvent(new CustomEvent('menu', { detail: open }))
   }, [open])
-  return (
+  return (<>
 <header className="nav"><div className="wrap"><div className={"navbar" + (open ? " open" : "")} onKeyDown={e => e.key === "Escape" && setOpen(false)}>
 <a href="/" aria-label="Parkan Group home"><img className="logo" src="/img/69c175a88a5363f02583985878053bcf.png" alt="Parkan Group — Built on Trust" /></a>
 <nav id="menu" className="menu" aria-label="Main">
@@ -36,5 +36,7 @@ export default function Header() {
 <IconButton variant="ghost" className="burger" label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="menu" onClick={() => setOpen(o => !o)} icon={<Lines open={open} />} />
 </div>
 </div></div></header>
+<div className="nav-space" aria-hidden="true"></div>
+</>
   )
 }

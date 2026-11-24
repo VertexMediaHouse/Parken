@@ -1322,3 +1322,16 @@ section.alt+section:not(.card,.alt):before{top:calc(var(--gap) * -1 - 2px)}
 /* mobile menu open: page behind stays put; a menu taller than the screen scrolls inside itself */
 html.menu-open{overflow:hidden}
 @media (max-width:900px){.navbar.open{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}}
+
+/* header: fixed, so it is always on screen (sticky failed on some phones) and the open mobile menu
+   overlays the page instead of pushing it down. .nav-space holds the header's closed height in the flow. */
+.nav{position:fixed;top:0;left:0;right:0}
+.nav-space{height:104px}
+html{scroll-padding-top:112px}
+@media (max-width:900px){.nav-space{height:98px}html{scroll-padding-top:106px}}
+
+/* phone heroes: fill most of the first screen (sub-page heroes leave room for the section picker) */
+@media (max-width:900px){
+  .hx-card{min-height:min(720px,calc(100svh - 118px))!important}
+  .pagehead{min-height:min(600px,calc(100svh - 150px))!important;display:flex;flex-direction:column;justify-content:center}
+}
