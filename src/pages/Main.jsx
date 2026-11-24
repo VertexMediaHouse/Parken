@@ -14,7 +14,7 @@ const projects = {
   progress: [
     ['Healthcare', 'Jayadeva Hospital, Hubballi', 'Hubballi · 250 beds · cardiac hospital', '/img/7aa2c2aa6de312a190ee5d9684012526.jpg', 'Jayadeva Hospital Hubballi building under construction at night'],
     ['Healthcare', 'Government Hospital, Bailhongal', 'Belagavi district · 50 beds · new taluk hospital', '/img/2fbd60c19eb9c691a775bbfd81bf9f56.jpg', 'Workers laying reinforcement at the Bailhongal hospital site'],
-    ['Government', 'PWD Street Lighting', 'Huvinahadagali · 4,100+ LED street lights for the PWD', '/img/7c2464003990a220631972e928a422ee.jpg', 'High-mast street light installed for the PWD in Huvinahadagali'],
+    ['Government', 'PWD Street Lighting', 'Huvinahadagali · 4,100+ LED street lights for the PWD', '/img/7c2464003990a220631972e928a422ee.jpg', 'High-mast street light installed for the PWD in Huvinahadagali', '50% 30%'],
   ],
   done: [
     ['Healthcare', 'Government Hospital, Shirhatti', 'Gadag · 100 beds · taluk hospital', '/img/d69f347a7af9b6768177cdac9874b11b.jpg', 'Government Hospital Shirhatti lit up at night'],
@@ -44,7 +44,12 @@ class Component extends DCLogic {
 }
 
 
-const SLIDES = ['/media/home-hero-1.webp', '/media/home-hero-2.webp', '/media/home-hero-3.webp']
+// each slide carries its own copy; the text block swaps with the image
+const SLIDES = [
+  { src: '/media/home-hero-1.webp', eyebrow: 'Electrical solutions for a stronger tomorrow', h1: <>Wires, Cables &amp; Components <em>That Power India.</em></>, lead: 'Reliable electrical products for homes, businesses, industry and infrastructure.' },
+  { src: '/media/home-hero-2.webp', eyebrow: 'PARKAN cable accessories', h1: <>Glands, Lugs &amp; Ties <em>Built to Hold.</em></>, lead: 'Cable glands, copper and aluminium lugs, clips and ties for clean, secure installations.' },
+  { src: '/media/home-hero-3.webp', eyebrow: 'Conduits & boxes for every site', h1: <>Conduits &amp; Junction Boxes <em>Made for Real Sites.</em></>, lead: 'Flexible pipe, surface and modular boxes that keep wiring protected from slab to switch.' },
+]
 // background slider: slides travel left to right; state = [current, previous]
 function HeroSlides() {
   const [[cur, prev], set] = useState([0, -1])
@@ -54,11 +59,23 @@ function HeroSlides() {
     const t = setTimeout(() => go((cur + 1) % SLIDES.length), 6000)
     return () => clearTimeout(t)
   }, [cur])
+  const s = SLIDES[cur]
   return <>
     <div className="hx-slides" aria-hidden="true">
-      {SLIDES.map((src, i) => <div key={src} className={'hx-slide' + (i === cur ? ' on' : i === prev ? ' out' : '')}><img src={src} alt="" fetchPriority={i ? 'low' : 'high'} /></div>)}
+      {SLIDES.map(({ src }, i) => <div key={src} className={'hx-slide' + (i === cur ? ' on' : i === prev ? ' out' : '')}><img src={src} alt="" fetchPriority={i ? 'low' : 'high'} /></div>)}
     </div>
-    <div className="hx-dots"><button type="button" className="hx-arr" aria-label="Previous image" onClick={() => go((cur + SLIDES.length - 1) % SLIDES.length)}><CaretLeft size={18} weight="bold" /></button>{SLIDES.map((s, i) => <button key={s} type="button" aria-label={`Show image ${i + 1}`} aria-current={i === cur} className={i === cur ? 'on' : ''} onClick={() => go(i)}><span /></button>)}<button type="button" className="hx-arr" aria-label="Next image" onClick={() => go((cur + 1) % SLIDES.length)}><CaretRight size={18} weight="bold" /></button></div>
+    <div className="hx-body">
+      <div className="hx-copy" key={cur}>
+        <p className="hx-eyebrow"><span>{s.eyebrow}</span></p>
+        <h1 className="hx-h1">{s.h1}</h1>
+        <p className="hx-lead">{s.lead}</p>
+      </div>
+      <div className="row" style={{gap: "32px"}}>
+        <Button size="lg" href="/products" iconRight={<Arrow />}>Explore Our Products</Button>
+        <Button variant="secondary" size="lg" href="/verticals" iconRight={<ArrowUpRight size={16} />}>Our Verticals</Button>
+      </div>
+    </div>
+    <div className="hx-dots"><button type="button" className="hx-arr" aria-label="Previous image" onClick={() => go((cur + SLIDES.length - 1) % SLIDES.length)}><CaretLeft size={18} weight="bold" /></button>{SLIDES.map(({ src: s }, i) => <button key={s} type="button" aria-label={`Show image ${i + 1}`} aria-current={i === cur} className={i === cur ? 'on' : ''} onClick={() => go(i)}><span /></button>)}<button type="button" className="hx-arr" aria-label="Next image" onClick={() => go((cur + 1) % SLIDES.length)}><CaretRight size={18} weight="bold" /></button></div>
   </>
 }
 
@@ -70,15 +87,6 @@ export default function Main() {
 
 <section className="hx"><div className="wrap"><div className="hx-card">
 <HeroSlides />
-<div className="hx-body">
-<p className="hx-eyebrow"><span>Electrical solutions for a stronger tomorrow</span></p>
-<h1 className="hx-h1">Wires, Cables &amp; Components <em>That Power India.</em></h1>
-<p className="hx-lead">Reliable electrical products for homes, businesses, industry and infrastructure.</p>
-<div className="row" style={{gap: "32px"}}>
-<Button size="lg" href="/products" iconRight={<Arrow />}>Explore Our Products</Button>
-<Button variant="secondary" size="lg" href="/verticals" iconRight={<ArrowUpRight size={16} />}>Our Verticals</Button>
-</div>
-</div>
 </div></div></section>
 
 <section className="sec-tight alt brands" aria-label="Brands we distribute"><div className="wrap">
@@ -121,9 +129,9 @@ export default function Main() {
 <Button href="/verticals" iconRight={<Arrow />}>Explore Our Verticals</Button>
 </div>
 <div className="g3">
-<a className="vcard" href="/trading"><img src="/media/vertical-trading-720.webp" alt="Warehouse racks stocked with wire reels and electrical goods" loading="lazy" /><div className="vbody"><span className="vico float"><Package /></span><h3 className="h3">Trading &amp; Distribution</h3><p className="small">Electrical products from India's top brands.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
-<a className="vcard" href="/infrastructure"><img src="/media/vertical-infra-720.webp" alt="Hospital building with completed electrical works, lit at night" loading="lazy" /><div className="vbody"><span className="vico float red"><HardHat /></span><h3 className="h3">Infrastructure &amp; Projects</h3><p className="small">Electrical infrastructure, from design to handover.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
-<a className="vcard" href="/in-house-brand"><img src="/media/vertical-brand-720.webp" alt="Electrician wiring a distribution board" loading="lazy" /><div className="vbody"><span className="vico float"><Cube /></span><h3 className="h3">In-house Brand</h3><p className="small">Quality products under our own PARKAN brand.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/trading"><img src="/media/vertical-trading-720.webp" alt="Warehouse racks stocked with wire reels and electrical goods" loading="lazy" /><div className="vbody"><span className="vico float red"><Package /></span><h3 className="h3">Trading &amp; Distribution</h3><p className="small">Electrical products from India's top brands. Serving 1,700+ dealers and bulk projects across 13 branches.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/infrastructure"><img src="/media/vertical-infra-720.webp" alt="Hospital building with completed electrical works, lit at night" loading="lazy" /><div className="vbody"><span className="vico float red"><HardHat /></span><h3 className="h3">Infrastructure &amp; Projects</h3><p className="small">Electrical infrastructure, from design to handover. 50+ government hospitals and smart-city works delivered.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
+<a className="vcard" href="/in-house-brand"><img src="/media/vertical-brand-720.webp" alt="Electrician wiring a distribution board" loading="lazy" /><div className="vbody"><span className="vico float red"><Cube /></span><h3 className="h3">In-house Brand</h3><p className="small">Quality products under our own PARKAN brand. Copper wires, cable accessories and conduits built for reliability.</p><Button as="span" variant="link" iconRight={<Arrow />}>Learn More</Button></div></a>
 </div>
 </div></section>
 
@@ -151,7 +159,7 @@ export default function Main() {
 </div>
 </div>
 <div key={v.tab} className="pmarq" role="tabpanel"><div className="ptrack">
-{[0, 1].flatMap(k => v.items.map(([sector, name, desc, src, alt]) => <article key={name + k} className="pcard" aria-hidden={k ? 'true' : undefined}><img src={src} alt={k ? '' : alt} loading="lazy" /><div className="pbody"><span className={'tag ' + SECTOR[sector]}>{sector}</span><h3 className="h4">{name}</h3><p className="small">{desc}</p></div></article>))}
+{[0, 1].flatMap(k => v.items.map(([sector, name, desc, src, alt, pos]) => <article key={name + k} className="pcard" aria-hidden={k ? 'true' : undefined}><img src={src} alt={k ? '' : alt} loading="lazy" style={pos && {objectPosition: pos}} /><div className="pbody"><span className={'tag ' + SECTOR[sector]}>{sector}</span><h3 className="h4">{name}</h3><p className="small">{desc}</p></div></article>))}
 </div></div>
 <div className="row" style={{justifyContent: "center", marginTop: "8px"}}><Button variant="link" href="/infrastructure" iconRight={<Arrow />}>View All Projects</Button></div>
 </div></section>

@@ -4,6 +4,8 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { COMPANY } from '../SubNav.jsx'
+import { Arrow } from '../Header.jsx'
 
 // the last milestone is highlighted as the newest
 const MILESTONES = [
@@ -36,20 +38,30 @@ export default function About() {
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / About Us</p>
 <p className={"eyebrow"}>About us</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>One store to <em>13 branches</em></h1>
-<p className={"lead"}>23+ years of reliable electrical supply and projects.</p>
+<p className={"lead"}>23+ years of reliable electrical supply and projects. What began as a single store in Hubballi now serves 1,700+ dealers across three states.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
+<SubNav label="Company sections" kicker="Company" items={COMPANY} current="/about" />
 
-<section className={"sec"}><div className={"wrap g2 duo"} style={{gap: "64px"}}>
-<div className={"stack"} style={{gap: "20px"}}>
-<p className={"eyebrow"} style={{margin: "0"}}>Who we are</p>
-<h2 className={"h2"}>About the company</h2>
-<p>Parkan Enterprises Limited has 23+ years in electrical supply and infrastructure. Based in Hubballi, with 13 branches across Karnataka, Goa and Gujarat.</p>
-<p>One of the region's largest electrical wholesalers, supplying 1,700+ dealers with India's top brands.</p>
-<p>We have also delivered 50+ government projects: hospitals, public lighting and smart-city works.</p>
-<p>Now we make our own products under the PARKAN brand.</p>
+<section className="sec"><div className="wrap g2 duo about-duo" style={{gap: "56px"}}>
+<div className="stack about-text-col" style={{gap: "18px"}}>
+  <p className="eyebrow" style={{margin: "0"}}>Who we are</p>
+  <h2 className="h2" style={{lineHeight: "1.15"}}>About the company</h2>
+  <p style={{fontWeight: "500", color: "var(--navy)"}}>Parkan Enterprises Limited has 23+ years in electrical supply and infrastructure. Based in Hubballi, with 13 branches across Karnataka, Goa and Gujarat.</p>
+  <p>One of the region's largest electrical wholesalers, supplying 1,700+ dealers with India's top brands.</p>
+  <p>We have also delivered 50+ government projects: hospitals, public lighting and smart-city works.</p>
+  <p>Now we make our own products under the PARKAN brand.</p>
+  <div style={{paddingTop: "10px"}}>
+    <Button href="/company" iconRight={<Arrow />}>Explore Company Overview</Button>
+  </div>
 </div>
-<div className={"stack"} style={{gap: "16px"}}><img src={"/media/about-company-2.webp"} alt={"Office building at dusk"} loading={"lazy"} style={{width: "100%", height: "340px", borderRadius: "8px", objectFit: "cover", display: "block"}} /><div className={"g2"} style={{gap: "16px"}}><img src={"/media/about-company-1.webp"} alt={"Electrician installing ceiling cable trays"} loading={"lazy"} style={{width: "100%", height: "160px", objectFit: "cover", objectPosition: "70% center", borderRadius: "8px", display: "block"}} /><img src={"/media/about-company-3-720.webp"} alt={"Multi-core copper cables"} loading={"lazy"} style={{width: "100%", height: "160px", objectFit: "cover", borderRadius: "8px", display: "block"}} /></div></div>
+<div className="stack about-pics" style={{gap: "14px"}}>
+  <img className="about-pic-main" src="/media/about-company-2.webp" alt="Office building at dusk" loading="lazy" />
+  <div className="g2 about-pic-sub" style={{gap: "14px"}}>
+    <img src="/media/about-company-1.webp" alt="Electrician installing ceiling cable trays" loading="lazy" style={{objectPosition: "70% center"}} />
+    <img src="/media/about-company-3-720.webp" alt="Multi-core copper cables" loading="lazy" />
+  </div>
+</div>
 </div></section>
 
 <section style={{padding: "0 0 44px"}}><div className={"wrap"}>

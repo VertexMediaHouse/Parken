@@ -4,6 +4,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { VERTICALS } from '../SubNav.jsx'
 import { productPath, products } from '../products.js'
 
 const QUALITY = [
@@ -24,13 +25,14 @@ export default function Manufacturing() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/home-hero-2.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/vertical-brand.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / In-house Brand</p>
 <p className={"eyebrow"}>Vertical 03 · Since 2026</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>In-house <em>Brand</em></h1>
-<p className={"lead"}>Quality electrical products under our own PARKAN brand.</p>
+<p className={"lead"}>Quality electrical products under our own PARKAN brand. Copper wires, cable accessories and conduits, sold through our dealer network.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
+<SubNav label="Vertical sections" kicker="Our verticals" items={VERTICALS} current="/in-house-brand" />
 
 <section className={"sec"}><div className={"wrap g2 duo"} style={{gap: "64px"}}>
 <div className={"g2"} style={{gap: "12px"}}>

@@ -4,6 +4,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { VERTICALS } from '../SubNav.jsx'
 
 const SERVICES = [
   ['Inside the building', '/media/projects-work-1.webp', 'Electrician wiring a distribution board', [
@@ -33,9 +34,10 @@ export default function Infrastructure() {
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / Infrastructure &amp; Projects</p>
 <p className={"eyebrow"}>Vertical 02 · Since 2020</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Infrastructure &amp; <em>Projects</em></h1>
-<p className={"lead"}>Cabling, panels and lighting for government hospitals and smart-city works across Karnataka.</p>
+<p className={"lead"}>Cabling, panels and lighting for government hospitals and smart-city works across Karnataka. We handle design, supply, installation and handover.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
+<SubNav label="Vertical sections" kicker="Our verticals" items={VERTICALS} current="/infrastructure" />
 
 <section style={{padding: "28px 0 0"}}><div className={"wrap"}>
 <div className={"g3"} style={{background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", padding: "28px", gap: "0"}}>

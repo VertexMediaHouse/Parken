@@ -4,6 +4,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { COMPANY } from '../SubNav.jsx'
 
 class Component extends DCLogic {
 renderVals() {
@@ -16,13 +17,14 @@ export default function Company() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-hero.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-company-2.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Company</p>
 <p className={"eyebrow"}>Company</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>23 years of <em>powering projects</em></h1>
-<p className={"lead"}>Part of the Pooja Group. Based in Hubballi, with 13 branches across Karnataka, Goa and Gujarat.</p>
+<p className={"lead"}>Part of the Pooja Group. Based in Hubballi, with 13 branches across Karnataka, Goa and Gujarat. Trading, projects and our own PARKAN brand under one roof.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
+<SubNav label="Company sections" kicker="Company" items={COMPANY} current="/company" />
 
 <section style={{padding: "28px 0 0"}}><div className={"wrap"}>
 <div className={"g4"} style={{background: "#FFFFFF", border: "1px solid #DDE2EA", borderRadius: "8px", padding: "28px", gap: "0"}}>

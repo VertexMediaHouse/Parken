@@ -4,6 +4,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header, { Arrow } from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { VERTICALS } from '../SubNav.jsx'
 
 // each vertical feeds the next; the last one is highlighted as the outcome
 const FLOW = [
@@ -23,13 +24,14 @@ export default function Verticals() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/home-hero-1.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/vertical-infra.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Verticals</p>
 <p className={"eyebrow"}>Three business verticals</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Three businesses, <em>one strength</em></h1>
-<p className={"lead"}>Supply, projects and our own brand. Each one makes the others stronger.</p>
+<p className={"lead"}>Supply, projects and our own brand. Each one makes the others stronger, from a single coil of wire to a full hospital fit-out.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
+<SubNav label="Vertical sections" kicker="Our verticals" items={VERTICALS} current="/verticals" />
 
 <section className={"sec"}><div className={"wrap stack vstack"} style={{gap: "88px"}}>
 <div className={"g2 duo vstack-card"} style={{gap: "64px", "--i": 0}}>

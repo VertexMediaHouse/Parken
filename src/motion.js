@@ -29,6 +29,7 @@ export function startMotion() {
   const lenis = new Lenis({ lerp: 0.12, smoothWheel: true })
   const raf = t => { lenis.raf(t); requestAnimationFrame(raf) }
   requestAnimationFrame(raf)
+  addEventListener('menu', e => e.detail ? lenis.stop() : lenis.start()) // Header's mobile menu open/closed
 
   // reveal: grid children stagger, everything else in a section fades up as a block
   const grids = '.g2 > *, .g3 > *, .g4 > *, .g5 > *'

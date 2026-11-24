@@ -15,6 +15,8 @@ const M = {
   Manufacturing: ['PARKAN In-house Brand | Parkan Group', 'PARKAN wires, cable accessories, conduits and boxes, made through trusted contract manufacturing and backed by 23+ years of trade.'],
   Products: ['Our Products | Parkan Group', 'Browse PARKAN copper flexible wire, submersible wire, cable glands, terminals, ties, clips, flexible pipe and modular boxes.'],
   Contact: ['Contact Us | Parkan Group', 'Send an enquiry, request bulk pricing or book a meeting with Parkan Group. Call +91 92743 37813.'],
+  Privacy: ['Privacy Policy | Parkan Group', 'Privacy policy for Parkan Enterprises Limited: how we collect, use, and protect your information across our website and services.'],
+  Terms: ['Terms and Conditions | Parkan Group', 'Terms and conditions for Parkan Enterprises Limited: guidelines, policies, and conditions governing the use of our website and services.'],
   Admin: ['Admin | Parkan Group', 'Content admin.'],
 }
 

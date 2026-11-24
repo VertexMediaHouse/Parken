@@ -10,5 +10,7 @@
   "Manufacturing": "/in-house-brand",
   "Products": "/products",
   "Contact": "/contact",
+  "Privacy": "/privacy-policy",
+  "Terms": "/terms-and-conditions",
   "Admin": "/admin"
 }

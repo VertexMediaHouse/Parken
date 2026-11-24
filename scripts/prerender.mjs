@@ -14,6 +14,17 @@ for (const [name, path] of pageList) {
   if (path !== '/') writeFileSync(`dist${path}.html`, out) // hosts that map /about to about.html
 }
 
+// Write alias pages for /privacy and /terms
+const aliases = { '/privacy': '/privacy-policy', '/terms': '/terms-and-conditions' }
+for (const [alias, target] of Object.entries(aliases)) {
+  try {
+    const content = readFileSync(`dist${target}/index.html`, 'utf8')
+    mkdirSync(`dist${alias}`, { recursive: true })
+    writeFileSync(`dist${alias}/index.html`, content)
+    writeFileSync(`dist${alias}.html`, content)
+  } catch {}
+}
+
 const urls = pageList.filter(([n]) => n !== 'Admin').map(([, p]) => `  <url><loc>${SITE_URL}${p}</loc></url>`)
 writeFileSync('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`)
 writeFileSync('dist/robots.txt', `User-agent: *\nDisallow: /admin\nSitemap: ${SITE_URL}/sitemap.xml\n`)

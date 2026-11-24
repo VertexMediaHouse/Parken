@@ -1,9 +1,10 @@
 import { CaretDown, FilePdf, MagnifyingGlass } from '@phosphor-icons/react'
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav from '../SubNav.jsx'
 import ProductCard from '../ProductCard.jsx'
 import { categories, products } from '../products.js'
 
@@ -26,17 +27,16 @@ export default function Products() {
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/home-hero-3.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/projects-work-1.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / Our Products</p>
 <p className={"eyebrow"}>PARKAN products</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Our Own Range, <em>Built on 23 Years</em></h1>
-<p className={"lead"}>PARKAN products, at 13 branches and 1,700+ dealers.</p>
-<div className={"row"} style={{gap: "12px", marginTop: "28px", maxWidth: "760px", flexWrap: "nowrap"}}><label htmlFor={"q"} style={{position: "absolute", left: "-9999px"}}>Search products</label><input id={"q"} className={"input"} type={"search"} placeholder={"Search by product name or size"} style={{minHeight: "56px", border: "0"}} /><Button variant="accent" icon={<MagnifyingGlass size={18} />}>Search</Button></div>
+<p className={"lead"}>PARKAN products, at 13 branches and 1,700+ dealers. Browse wires, cable accessories and conduits, then ask us for prices and stock.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
+<div className={"row"} style={{gap: "12px", marginTop: "20px", maxWidth: "760px", flexWrap: "nowrap"}}><label htmlFor={"q"} style={{position: "absolute", left: "-9999px"}}>Search products</label><input id={"q"} className={"input"} type={"search"} placeholder={"Search by product name or size"} style={{minHeight: "56px", border: "0"}} /><Button variant="accent" icon={<MagnifyingGlass size={18} />}>Search</Button></div>
 </div></section>
 
-<nav className={"subnav"} aria-label={"Product categories"}><div className={"wrap"}>
-{v.cats.map((c, i) => (<Fragment key={i}><Button variant="secondary" size="sm" className={c.cls} aria-pressed={c.cls === 'on'} onClick={c.pick}>{c.label}</Button></Fragment>))}
-</div></nav>
+<SubNav label="Product categories" kicker="Category" variant="secondary" items={v.cats.map(c => ({ label: c.label, on: c.cls === 'on', pick: c.pick }))} />
 
 <section className={"sec"} style={{paddingTop: "24px"}}><div className={"wrap"} style={{display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "flex-start"}}>
 <aside className={"card filters" + (filtersOpen ? " open" : "")} aria-label={"Filters"} style={{flex: "1 1 260px", maxWidth: "300px", gap: "22px"}}>

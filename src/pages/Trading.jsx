@@ -4,6 +4,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { VERTICALS } from '../SubNav.jsx'
 
 const CUSTOMERS = [
   ['Contractors', <HardHat />],
@@ -48,9 +49,10 @@ export default function Trading() {
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/verticals"}>Verticals</a> / Trading &amp; Distribution</p>
 <p className={"eyebrow"}>Vertical 01 · Since 2003</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Trading &amp; <em>Distribution</em></h1>
-<p className={"lead"}>One of the region's largest electrical wholesalers.</p>
+<p className={"lead"}>One of the region's largest electrical wholesalers. Products from India's top brands, stocked at 13 branches for dealers, contractors and bulk projects.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Vertical sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/verticals"}>Overview</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/trading"}>Trading &amp; Distribution</Button><Button variant="ghost" size="sm" href={"/infrastructure"}>Infrastructure &amp; Projects</Button><Button variant="ghost" size="sm" href={"/in-house-brand"}>In-house Brand</Button></div></nav>
+<SubNav label="Vertical sections" kicker="Our verticals" items={VERTICALS} current="/trading" />
 
 <section className={"sec"}><div className={"wrap g2 duo"} style={{gap: "64px"}}>
 <div className={"stack"} style={{gap: "18px"}}><p className={"eyebrow"} style={{margin: "0"}}>Overview</p><h2 className={"h2"}>Our core since 2003</h2>

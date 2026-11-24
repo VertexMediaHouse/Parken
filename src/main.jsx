@@ -6,7 +6,9 @@ import { startMotion } from './motion.js'
 import { productAt } from './products.js'
 
 const pages = import.meta.glob('./pages/*.jsx') // one chunk per page
-const name = productAt(location.pathname) ? 'ProductDetail' : Object.keys(routes).find(n => routes[n] === location.pathname.replace(/\/+$/, '') || (n === 'Main' && location.pathname === '/'))
+const ALIASES = { '/privacy': 'Privacy', '/terms': 'Terms' }
+const pathNorm = location.pathname.replace(/\/+$/, '')
+const name = productAt(location.pathname) ? 'ProductDetail' : (ALIASES[pathNorm] || Object.keys(routes).find(n => routes[n] === pathNorm || (n === 'Main' && location.pathname === '/')))
 const Page = (await pages[`./pages/${name ?? 'Main'}.jsx`]()).default
 
 const app = <IconContext.Provider value={{ weight: 'duotone' }}><Page /></IconContext.Provider>

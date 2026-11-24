@@ -4,7 +4,9 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { COMPANY } from '../SubNav.jsx'
 import { branches, directions } from '../branches.js'
+import { W, H, PINS, INDIA } from '../indiaMap.js'
 
 class Component extends DCLogic {
   constructor(props) { super(props); this.state = { st: 'All' }; }
@@ -18,29 +20,58 @@ class Component extends DCLogic {
   }
 }
 
+// India map, red pin per state we operate in. Label sits left or right of its pin so Goa and Hubballi (close together) never collide.
+const STATES = [
+  { at: PINS.ahmedabad, name: 'Gujarat', sub: 'Ahmedabad · Registered office', side: 1 },
+  { at: PINS.hubballi, name: 'Karnataka', sub: 'Hubballi · Head office', side: 1, hq: true },
+  { at: PINS.margao, name: 'Goa', sub: 'Margao', side: -1 },
+]
+function BranchMap() {
+  return <div className="netmap">
+    <svg viewBox={`-150 -30 ${W + 230} ${H + 60}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of India with pins in Gujarat (Ahmedabad), Karnataka (Hubballi head office) and Goa (Margao)">
+      <defs><pattern id="netdots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.4" /></pattern></defs>
+      <path className="netmap-land" d={INDIA} />
+      <path className="netmap-dots" d={INDIA} fill="url(#netdots)" />
+      <path className="netmap-line" d={INDIA} />
+      {STATES.map(({ at: [x, y], name, sub, side, hq }) => <g key={name} className="netpin">
+        <circle className="netpin-pulse" cx={x} cy={y} r={hq ? 16 : 12} />
+        <circle className="netpin-dot" cx={x} cy={y} r={hq ? 13 : 10} />
+        <text x={x + side * 30} y={y - 6} textAnchor={side > 0 ? 'start' : 'end'}><tspan className="netpin-name">{name}</tspan><tspan className="netpin-sub" x={x + side * 30} dy="40">{sub}</tspan></text>
+      </g>)}
+    </svg>
+  </div>
+}
+
 export default function Branches() {
   const v = useDC(Component)
   return (
 <div style={{width: "100%", minWidth: "0", color: "#1A1F2B", background: "#FFFFFF"}}>
 <Header />
-<section className={"pagehead on-dark"} style={{"--bg": "url(/media/branch-map.webp)"}}><div className={"wrap"}>
+<section className={"pagehead on-dark"} style={{"--bg": "url(/media/about-company-2.webp)"}}><div className={"wrap"}>
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Our Branches</p>
 <p className={"eyebrow"}>Our branches</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Close to <em>you</em></h1>
-<p className={"lead"}>13 branches. Head office in Hubballi, registered office in Ahmedabad.</p>
+<p className={"lead"}>13 branches across Karnataka, Goa and Gujarat, led from our Hubballi head office. Walk in, call or send an enquiry to your nearest branch.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/branches"}>Our Branches</Button></div></nav>
+<SubNav label="Company sections" kicker="Company" items={COMPANY} current="/branches" />
 
-<section className={"sec"} style={{paddingBottom: "28px"}}><div className={"wrap g2 duo"} style={{gap: "56px"}}>
-<img src={"/img/0ff6f04e8e1bc90dfbcd5e8087794c6a.jpg"} alt={"Map of western India showing Parkan Group branches: head office in Hubballi, branches in Belagavi, Margao, Shivamogga, Mangaluru, Bengaluru and Ahmedabad"} style={{width: "100%", height: "auto", maxHeight: "620px", aspectRatio: "1189 / 1390", objectFit: "cover", objectPosition: "top", background: "#0E2A52", borderRadius: "8px", display: "block"}} />
+<section className={"sec"} style={{paddingBottom: "40px"}}><div className={"wrap netgrid"}>
+<BranchMap />
 <div className={"stack"} style={{gap: "20px"}}>
 <p className={"eyebrow"} style={{margin: "0"}}>Our network</p>
 <h2 className={"h2"}>Three states, one network</h2>
-<p>Our branches serve 1,700+ dealers. Ahmedabad and our Odhav warehouse handle the PARKAN brand and pan-India shipping.</p>
-<div className={"g3"} style={{gap: "16px"}}>
-<div className={"card"} style={{gap: "4px", padding: "20px"}}><span className={"stat"} style={{fontSize: "32px"}}>11</span><span className={"small muted"}>Karnataka</span></div>
-<div className={"card"} style={{gap: "4px", padding: "20px"}}><span className={"stat"} style={{fontSize: "32px"}}>1</span><span className={"small muted"}>Goa</span></div>
-<div className={"card"} style={{gap: "4px", padding: "20px"}}><span className={"stat"} style={{fontSize: "32px"}}>1</span><span className={"small muted"}>Gujarat</span></div>
+<p>From our head office in Hubballi, 13 branches serve 1,700+ dealers, contractors and project sites across Karnataka, Goa and Gujarat. Every branch keeps stock on hand, so most orders leave the same day.</p>
+<ul className={"list"}>
+<li className={"check"}>Head office in Hubballi, registered office in Ahmedabad</li>
+<li className={"check"}>Odhav warehouse ships the PARKAN brand across India</li>
+<li className={"check"}>Open Mon–Sat, 9:30 am – 7:00 pm at every branch</li>
+</ul>
+<div className={"g4 netstats"}>
+<div className={"card"}><span className={"stat"}>13</span><span className={"small muted"}>Branches</span></div>
+<div className={"card"}><span className={"stat"}>11</span><span className={"small muted"}>Karnataka</span></div>
+<div className={"card"}><span className={"stat"}>1</span><span className={"small muted"}>Goa</span></div>
+<div className={"card"}><span className={"stat"}>1</span><span className={"small muted"}>Gujarat</span></div>
 </div>
 </div>
 </div></section>

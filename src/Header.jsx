@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, CaretDown, List, PhoneCall, X } from "@phosphor-icons/react"
 import Button, { IconButton } from './Button.jsx'
 
@@ -14,6 +14,11 @@ const Nav = ({ href, ...p }) => <Button variant="ghost" size="sm" href={href} cl
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  // open menu: freeze the page behind it (motion.js pauses smooth scroll on this event)
+  useEffect(() => {
+    document.documentElement.classList.toggle('menu-open', open)
+    dispatchEvent(new CustomEvent('menu', { detail: open }))
+  }, [open])
   return (
 <header className="nav"><div className="wrap"><div className={"navbar" + (open ? " open" : "")} onKeyDown={e => e.key === "Escape" && setOpen(false)}>
 <a href="/" aria-label="Parkan Group home"><img className="logo" src="/img/69c175a88a5363f02583985878053bcf.png" alt="Parkan Group — Built on Trust" /></a>

@@ -3,6 +3,7 @@ import { DCLogic, useDC } from '../dc.js'
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
 import Button from '../Button.jsx'
+import SubNav, { COMPANY } from '../SubNav.jsx'
 
 class Component extends DCLogic {
 renderVals() {
@@ -19,9 +20,10 @@ export default function Leadership() {
 <p className={"crumb"}><a href={"/"}>Home</a> / <a href={"/company"}>Company</a> / Our Leadership Team</p>
 <p className={"eyebrow"}>Our leadership team</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Experience <em>meets ambition</em></h1>
-<p className={"lead"}>Decades of industry experience and a clear plan for growth.</p>
+<p className={"lead"}>Decades of industry experience and a clear plan for growth. Meet the people who built Parkan from one store into a 13-branch network.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"/contact"}>Contact Us</Button></div>
 </div></section>
-<nav className={"subnav"} aria-label={"Company sections"}><div className={"wrap"}><Button variant="ghost" size="sm" href={"/company"}>Overview</Button><Button variant="ghost" size="sm" href={"/about"}>About Us</Button><Button variant="ghost" size="sm" className="on" aria-current="page" href={"/leadership"}>Our Leadership Team</Button><Button variant="ghost" size="sm" href={"/branches"}>Our Branches</Button></div></nav>
+<SubNav label="Company sections" kicker="Company" items={COMPANY} current="/leadership" />
 
 <section className={"sec"}><div className={"wrap"}>
 <div className={"sechead"}><div><p className={"eyebrow"}>Board of directors</p><h2 className={"h2"}>Our leaders</h2></div></div>

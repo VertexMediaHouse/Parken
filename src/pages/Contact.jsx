@@ -60,7 +60,8 @@ export default function Contact() {
 <p className={"crumb"}><a href={"/"}>Home</a> / Contact Us</p>
 <p className={"eyebrow"}>Contact us</p>
 <h1 className={"h1"} style={{marginBottom: "16px"}}>Let's Work <em>Together</em></h1>
-<p className={"lead"}>Supplies, projects, dealership or partnership: we are ready to help.</p>
+<p className={"lead"}>Supplies, projects, dealership or partnership: we are ready to help. Send an enquiry below or call your nearest branch, Mon–Sat, 9:30 am – 7:00 pm.</p>
+<div className={"row"} style={{gap: "12px", marginTop: "28px"}}><Button variant="accent" size="lg" href={"#enquiry"}>Contact Us</Button></div>
 </div></section>
 
 <div className={"wrap"} style={{marginTop: "-32px", position: "relative"}}>
@@ -71,7 +72,7 @@ export default function Contact() {
 <a className={"card"} href={"/branches"} style={{textDecoration: "none", boxShadow: "0 12px 32px rgba(14,42,82,.10)"}}><div className={"ico"}><Buildings /></div><h2 className={"h4"}>Registered office</h2><p className={"small"}>C-319, City Center, near Prem Darwaja, Girdhar Nagar, Ahmedabad</p></a>
 </div></div>
 
-<section className={"sec"}><div className={"wrap"}><div className={"enq"}>
+<section className={"sec"} id={"enquiry"}><div className={"wrap"}><div className={"enq"}>
 <form className={"enq-form"} aria-label={"Enquiry form"} action={"mailto:parkanenterprisesltd@gmail.com"} method={"post"} encType={"text/plain"} onSubmit={v.send}>
 <div className={"stack"} style={{gap: "8px"}}><p className={"eyebrow"} style={{margin: "0"}}>Enquiry form</p><h2 className={"h2"} style={{fontSize: "30px"}}>Send Us an Enquiry</h2></div>
 <div className={"g2"} style={{gap: "16px"}}>
