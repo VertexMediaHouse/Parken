@@ -1197,7 +1197,7 @@ section img[style*="border-radius"]{border-radius:var(--r)!important}
 @media (min-width:901px){
   .wrap{max-width:1280px}
   .pagehead{max-width:1280px}
-  .hx-card,.pagehead{min-height:560px}
+  .hx-card,.pagehead{min-height:632px}
 }
 /* section spacing: 20% more than the original (52/56, 36; mobile 36/40, 24) */
 .sec{padding:62px 0 67px}
@@ -1332,6 +1332,38 @@ html{scroll-padding-top:112px}
 
 /* phone heroes: fill most of the first screen (sub-page heroes leave room for the section picker) */
 @media (max-width:900px){
-  .hx-card{min-height:min(720px,calc(100svh - 118px))!important}
-  .pagehead{min-height:min(600px,calc(100svh - 150px))!important;display:flex;flex-direction:column;justify-content:center}
+  .hx-card{min-height:calc(100svh - 98px - 16px)!important}
+  .pagehead{min-height:calc(100svh - 98px - 16px)!important;display:flex;flex-direction:column;justify-content:center}
+  .pagehead:has(+.subnav){min-height:calc(100svh - 98px - 46px)!important}
+}
+
+/* phone hero slider: no arrows, dots centered */
+@media (max-width:900px){
+  .hx-dots .hx-arr{display:none!important}
+  .hx-dots{left:50%!important;right:auto!important;translate:-50% 0;justify-content:center}
+}
+
+/* phone heroes: photo carries the top half, copy anchored to the bottom, crumb pinned top */
+@media (max-width:900px){
+  .pagehead{justify-content:flex-end!important;padding-top:20px!important;
+    background:linear-gradient(180deg,rgba(10,22,40,.15) 0%,rgba(10,22,40,.45) 35%,rgba(10,22,40,.95) 68%),var(--bg,linear-gradient(var(--navy),var(--navy))) center/cover no-repeat,var(--navy)!important}
+  .pagehead .wrap{flex:1;display:flex;flex-direction:column;justify-content:flex-end}
+  .pagehead .crumb{margin-bottom:auto!important;align-self:flex-start;background:rgba(10,22,40,.45);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .pagehead .eyebrow{margin-top:24px}
+  .pagehead h1,.hx-h1{font-size:clamp(34px,10vw,42px)!important;line-height:1.06!important}
+  .pagehead .row>*{width:100%}
+  .hx-card{align-items:flex-end!important}
+  .hx-card:before{background:linear-gradient(180deg,rgba(10,22,40,.1) 0%,rgba(10,22,40,.45) 35%,rgba(10,22,40,.95) 66%)!important}
+  .hx-body{width:100%}
+}
+
+/* phone product cards: photo on top edge-to-edge, title + line below, arrow on the right */
+@media (max-width:900px){
+  .bcard,.bcard.big{padding:0!important;gap:0!important;overflow:hidden}
+  .bcard img,.bcard.big img{order:-1;height:170px!important;max-height:none!important;aspect-ratio:auto!important;border-radius:0!important;box-shadow:none!important}
+  .btxt{display:grid!important;grid-template-columns:1fr auto;column-gap:16px;row-gap:4px!important;align-items:center;padding:18px 18px 20px}
+  .btxt .bico{display:none!important}
+  .btxt h3,.bcard.big h3{grid-column:1;font-size:20px!important}
+  .btxt p{grid-column:1;margin:0}
+  .btxt .btn{grid-column:2;grid-row:1/span 2;align-self:center!important;margin:0!important}
 }
